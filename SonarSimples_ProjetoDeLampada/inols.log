@@ -1,0 +1,911 @@
+
+
+
+
+
+
+
+Started logging.
+
+<<<
+Content-Length: 3049
+
+{"jsonrpc":"2.0","id":0,"method":"initialize","params":{"processId":12052,"clientInfo":{"name":"vscode","version":"1.50.0"},"rootPath":"c:\\Users\\ricar\\Desktop\\ApiPrograms\\sonarrr","rootUri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr","capabilities":{"workspace":{"applyEdit":true,"workspaceEdit":{"documentChanges":true,"resourceOperations":["create","rename","delete"],"failureHandling":"textOnlyTransactional"},"didChangeConfiguration":{"dynamicRegistration":true},"didChangeWatchedFiles":{"dynamicRegistration":true},"symbol":{"dynamicRegistration":true,"symbolKind":{"valueSet":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]}},"executeCommand":{"dynamicRegistration":true},"configuration":true,"workspaceFolders":true},"textDocument":{"publishDiagnostics":{"relatedInformation":true,"versionSupport":false,"tagSupport":{"valueSet":[1,2]}},"synchronization":{"dynamicRegistration":true,"willSave":true,"willSaveWaitUntil":true,"didSave":true},"completion":{"dynamicRegistration":true,"contextSupport":true,"completionItem":{"snippetSupport":true,"commitCharactersSupport":true,"documentationFormat":["markdown","plaintext"],"deprecatedSupport":true,"preselectSupport":true,"tagSupport":{"valueSet":[1]}},"completionItemKind":{"valueSet":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]}},"hover":{"dynamicRegistration":true,"contentFormat":["markdown","plaintext"]},"signatureHelp":{"dynamicRegistration":true,"signatureInformation":{"documentationFormat":["markdown","plaintext"],"parameterInformation":{"labelOffsetSupport":true}},"contextSupport":true},"definition":{"dynamicRegistration":true,"linkSupport":true},"references":{"dynamicRegistration":true},"documentHighlight":{"dynamicRegistration":true},"documentSymbol":{"dynamicRegistration":true,"symbolKind":{"valueSet":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]},"hierarchicalDocumentSymbolSupport":true},"codeAction":{"dynamicRegistration":true,"isPreferredSupport":true,"codeActionLiteralSupport":{"codeActionKind":{"valueSet":["","quickfix","refactor","refactor.extract","refactor.inline","refactor.rewrite","source","source.organizeImports"]}}},"codeLens":{"dynamicRegistration":true},"formatting":{"dynamicRegistration":true},"rangeFormatting":{"dynamicRegistration":true},"onTypeFormatting":{"dynamicRegistration":true},"rename":{"dynamicRegistration":true,"prepareSupport":true},"documentLink":{"dynamicRegistration":true,"tooltipSupport":true},"typeDefinition":{"dynamicRegistration":true,"linkSupport":true},"implementation":{"dynamicRegistration":true,"linkSupport":true},"colorProvider":{"dynamicRegistration":true},"foldingRange":{"dynamicRegistration":true,"rangeLimit":5000,"lineFoldingOnly":true},"declaration":{"dynamicRegistration":true,"linkSupport":true},"selectionRange":{"dynamicRegistration":true}},"window":{"workDoneProgress":true}},"initializationOptions":{},"trace":"off","workspaceFolders":[{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr","name":"sonarrr"}]}}
+>>>
+Content-Length: 598
+
+{"id":0,"result":{"capabilities":{"textDocumentSync":2,"hoverProvider":true,"completionProvider":{"triggerCharacters":[".","\u003e",":"]},"signatureHelpProvider":{"triggerCharacters":["(",","]},"definitionProvider":true,"documentHighlightProvider":true,"documentSymbolProvider":true,"workspaceSymbolProvider":true,"codeActionProvider":true,"documentFormattingProvider":true,"documentRangeFormattingProvider":true,"documentOnTypeFormattingProvider":{"firstTriggerCharacter":"\n"},"renameProvider":false,"executeCommandProvider":{"commands":["clangd.applyFix","clangd.applyTweak"]}}},"jsonrpc":"2.0"}
+<<<
+Content-Length: 52
+
+{"jsonrpc":"2.0","method":"initialized","params":{}}Content-Length: 2858
+
+{"jsonrpc":"2.0","method":"textDocument/didOpen","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino","languageId":"cpp","version":1,"text":"#define echoPin1 26\r\n#define trigPin1 27\r\n\r\n#define echoPin2 33\r\n#define trigPin2 25\r\n\r\nint numero = 0;\r\nint DoorWidth = 50; //!CALIBRAR\r\n\r\nbool flag1 = 0;\r\nbool flag2 = 0;\r\n\r\nvoid setup()\r\n{\r\n    pinMode(trigPin1, OUTPUT);\r\n    pinMode(echoPin1, INPUT);\r\n    pinMode(trigPin2, OUTPUT);\r\n    pinMode(echoPin2, INPUT);\r\n\r\n    Serial.begin(9600);\r\n}\r\n\r\nvoid loop()\r\n{\r\n    //?ENTRO/////////////////////////\r\n    if (sonar1() && flag1 == 0)\r\n    {\r\n        flag1 = 1;\r\n        if (flag2 == 0)\r\n        {\r\n            numero++;\r\n        }\r\n    }\r\n    //?.////////////////////////////\r\n\r\n    //!SAIU/////////////////////////\r\n    if (sonar2() && flag2 == 0)\r\n    {\r\n        flag2 = 1;\r\n        if (flag1 == 0)\r\n        {\r\n            numero--;\r\n            numero = numero < 0 ? 0 : numero;\r\n            \r\n        }\r\n    }\r\n    //!.////////////////////////////\r\n\r\n\r\n    if (!sonar1() && !sonar2() && flag1 == 1 && flag2 == 1)\r\n    {\r\n        flag1 = 0, flag2 = 0;\r\n        delay(1000);\r\n    }\r\n\r\n    Serial.print(\"Pessoas: \");\r\n    Serial.print(numero);\r\n    Serial.print(\"  \");\r\n    Serial.print(\"A Luz Ta \");\r\n    \r\n\r\n    if (numero > 0)\r\n    {\r\n        Serial.print(\"LIGADA\");\r\n    }\r\n    else\r\n    {\r\n        Serial.print(\"DESLIGADA\");\r\n    }\r\n}\r\n\r\n\r\nbool sonar1()\r\n{\r\n\r\n    long duration;\r\n    int distance;\r\n    bool Enter = false;\r\n\r\n    digitalWrite(trigPin1, LOW);\r\n    delayMicroseconds(2);\r\n\r\n    digitalWrite(trigPin1, HIGH);\r\n    delayMicroseconds(10);\r\n    digitalWrite(trigPin1, LOW);\r\n\r\n    duration = pulseIn(echoPin1, HIGH);\r\n\r\n    distance = duration * 0.034 / 2;\r\n    \r\n\r\n    Serial.print(distance);\r\n    Serial.print(\"  \");\r\n    \r\n    if (distance <= DoorWidth)\r\n    {\r\n        Enter = true;\r\n        return (Enter);\r\n        \r\n    }\r\n    else\r\n    {\r\n        Enter = false;\r\n        return (Enter);\r\n    }\r\n}\r\n\r\nbool sonar2()\r\n{\r\n    long duration;\r\n    int distance;\r\n    bool Enter = false;\r\n\r\n    digitalWrite(trigPin2, LOW);\r\n    delayMicroseconds(2);\r\n\r\n    digitalWrite(trigPin2, HIGH);\r\n    delayMicroseconds(10);\r\n    digitalWrite(trigPin2, LOW);\r\n\r\n    duration = pulseIn(echoPin2, HIGH);\r\n\r\n    distance = duration * 0.034 / 2;\r\n\r\n\r\n    Serial.println(distance);\r\n    \r\n    if (distance <= DoorWidth)\r\n    {\r\n        Enter = true;\r\n        return (Enter);\r\n        \r\n    }\r\n    else\r\n    {\r\n        Enter = false;\r\n        return (Enter);\r\n    }\r\n}\r\n"}}}Content-Length: 263
+
+{"jsonrpc":"2.0","id":1,"method":"textDocument/codeAction","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino"},"range":{"start":{"line":0,"character":0},"end":{"line":0,"character":0}},"context":{"diagnostics":[]}}}Content-Length: 192
+
+{"jsonrpc":"2.0","id":2,"method":"textDocument/hover","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino"},"position":{"line":9,"character":13}}}Content-Length: 62
+
+{"jsonrpc":"2.0","method":"$/cancelRequest","params":{"id":2}}
+>>>
+Content-Length: 111
+
+{"method":"window/workDoneProgress/create","params":{"token":"backgroundIndexProgress"},"id":0,"jsonrpc":"2.0"}Content-Length: 36
+
+{"id":1,"result":[],"jsonrpc":"2.0"}Content-Length: 38
+
+{"id":2,"result":null,"jsonrpc":"2.0"}
+<<<
+Content-Length: 38
+
+{"jsonrpc":"2.0","id":0,"result":null}
+>>>
+Content-Length: 143
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"title":"indexing","percentage":0,"kind":"begin"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"1/39","percentage":2.5641025641025643,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 158
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"2/39","percentage":5.128205128205129,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 158
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"2/39","percentage":5.128205128205129,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"3/39","percentage":7.6923076923076925,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"3/39","percentage":7.6923076923076925,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"4/39","percentage":10.256410256410257,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"4/39","percentage":10.256410256410257,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"5/39","percentage":12.820512820512821,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"5/39","percentage":12.820512820512821,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"6/39","percentage":15.384615384615385,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"6/39","percentage":15.384615384615385,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 158
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"7/39","percentage":17.94871794871795,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 158
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"7/39","percentage":17.94871794871795,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"8/39","percentage":20.512820512820515,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"8/39","percentage":20.512820512820515,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"9/39","percentage":23.076923076923077,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 160
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"10/39","percentage":25.641025641025642,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 160
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"10/39","percentage":25.641025641025642,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 160
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"11/39","percentage":28.205128205128204,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 160
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"11/39","percentage":28.205128205128204,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"12/39","percentage":30.76923076923077,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"12/39","percentage":30.76923076923077,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 160
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"13/39","percentage":33.333333333333336,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 160
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"13/39","percentage":33.333333333333336,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 158
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"14/39","percentage":35.8974358974359,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 158
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"14/39","percentage":35.8974358974359,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"15/39","percentage":38.46153846153846,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"15/39","percentage":38.46153846153846,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"16/39","percentage":41.02564102564103,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"16/39","percentage":41.02564102564103,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"17/39","percentage":43.58974358974359,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"18/39","percentage":46.15384615384615,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"18/39","percentage":46.15384615384615,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 160
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"19/39","percentage":48.717948717948715,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 160
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"19/39","percentage":48.717948717948715,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 160
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"20/39","percentage":51.282051282051285,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"21/39","percentage":53.84615384615385,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"22/39","percentage":56.41025641025641,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"22/39","percentage":56.41025641025641,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"23/39","percentage":58.97435897435897,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"24/39","percentage":61.53846153846154,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"24/39","percentage":61.53846153846154,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 158
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"25/39","percentage":64.1025641025641,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 158
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"25/39","percentage":64.1025641025641,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"26/39","percentage":66.66666666666667,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"26/39","percentage":66.66666666666667,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"27/39","percentage":69.23076923076923,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"27/39","percentage":69.23076923076923,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 158
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"28/39","percentage":71.7948717948718,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 158
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"28/39","percentage":71.7948717948718,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"29/39","percentage":74.35897435897436,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"30/39","percentage":76.92307692307692,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"31/39","percentage":79.48717948717949,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"31/39","percentage":79.48717948717949,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"32/39","percentage":82.05128205128206,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"33/39","percentage":84.61538461538461,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"33/39","percentage":84.61538461538461,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"34/39","percentage":87.17948717948718,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"35/39","percentage":89.74358974358974,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"35/39","percentage":89.74358974358974,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 158
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"36/39","percentage":92.3076923076923,"kind":"report"}},"jsonrpc":"2.0"}
+<<<
+Content-Length: 265
+
+{"jsonrpc":"2.0","id":3,"method":"textDocument/codeAction","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino"},"range":{"start":{"line":6,"character":1},"end":{"line":10,"character":15}},"context":{"diagnostics":[]}}}
+>>>
+Content-Length: 36
+
+{"id":3,"result":[],"jsonrpc":"2.0"}
+<<<
+Content-Length: 265
+
+{"jsonrpc":"2.0","id":4,"method":"textDocument/codeAction","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino"},"range":{"start":{"line":6,"character":0},"end":{"line":10,"character":15}},"context":{"diagnostics":[]}}}
+>>>
+Content-Length: 36
+
+{"id":4,"result":[],"jsonrpc":"2.0"}
+<<<
+Content-Length: 196
+
+{"jsonrpc":"2.0","id":5,"method":"textDocument/definition","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino"},"position":{"line":6,"character":0}}}
+>>>
+Content-Length: 36
+
+{"id":5,"result":[],"jsonrpc":"2.0"}
+<<<
+Content-Length: 191
+
+{"jsonrpc":"2.0","id":6,"method":"textDocument/hover","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino"},"position":{"line":6,"character":0}}}
+>>>
+Content-Length: 38
+
+{"id":6,"result":null,"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"37/39","percentage":94.87179487179488,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"38/39","percentage":97.43589743589743,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 107
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"kind":"end"}},"jsonrpc":"2.0"}
+<<<
+Content-Length: 192
+
+{"jsonrpc":"2.0","id":7,"method":"textDocument/hover","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino"},"position":{"line":25,"character":3}}}
+>>>
+Content-Length: 38
+
+{"id":7,"result":null,"jsonrpc":"2.0"}
+<<<
+Content-Length: 193
+
+{"jsonrpc":"2.0","id":8,"method":"textDocument/hover","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino"},"position":{"line":52,"character":18}}}
+>>>
+Content-Length: 269
+
+{"id":8,"result":{"contents":{"kind":"markdown","value":"### function `delay`  \n\n---\n→ `void`  \nParameters:  \n- `uint32_t`\n\n---\n```cpp\nvoid delay(uint32_t)\n```"},"range":{"start":{"line":63,"character":18},"end":{"line":63,"character":19}}},"jsonrpc":"2.0"}
+<<<
+Content-Length: 265
+
+{"jsonrpc":"2.0","id":9,"method":"textDocument/codeAction","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino"},"range":{"start":{"line":24,"character":4},"end":{"line":68,"character":5}},"context":{"diagnostics":[]}}}
+>>>
+Content-Length: 388
+
+{"id":9,"result":[{"title":"Extract to function","kind":"refactor","command":{"title":"Extract to function","command":"clangd.applyTweak","arguments":[{"tweakID":"ExtractFunction","file":"file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server334813247/sketch/sonarrr.ino.cpp","selection":{"start":{"line":35,"character":4},"end":{"line":79,"character":5}}}]}}],"jsonrpc":"2.0"}
+<<<
+Content-Length: 193
+
+{"jsonrpc":"2.0","id":10,"method":"textDocument/hover","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino"},"position":{"line":24,"character":3}}}
+>>>
+Content-Length: 39
+
+{"id":10,"result":null,"jsonrpc":"2.0"}
+<<<
+Content-Length: 194
+
+{"jsonrpc":"2.0","id":11,"method":"textDocument/hover","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino"},"position":{"line":30,"character":15}}}
+>>>
+Content-Length: 252
+
+{"id":11,"result":{"contents":{"kind":"markdown","value":"### variable `numero`  \n\n---\nType: `int`  \nValue = `0`  \n\n---\n```cpp\nint numero = 0\n```"},"range":{"start":{"line":41,"character":12},"end":{"line":41,"character":18}}},"jsonrpc":"2.0"}
+<<<
+Content-Length: 268
+
+{"jsonrpc":"2.0","id":12,"method":"textDocument/codeAction","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino"},"range":{"start":{"line":28,"character":23},"end":{"line":28,"character":23}},"context":{"diagnostics":[]}}}
+>>>
+Content-Length: 37
+
+{"id":12,"result":[],"jsonrpc":"2.0"}
+<<<
+Content-Length: 193
+
+{"jsonrpc":"2.0","id":13,"method":"textDocument/hover","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino"},"position":{"line":24,"character":3}}}
+>>>
+Content-Length: 39
+
+{"id":13,"result":null,"jsonrpc":"2.0"}
+<<<
+Content-Length: 266
+
+{"jsonrpc":"2.0","id":14,"method":"textDocument/codeAction","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino"},"range":{"start":{"line":29,"character":9},"end":{"line":29,"character":9}},"context":{"diagnostics":[]}}}
+>>>
+Content-Length: 37
+
+{"id":14,"result":[],"jsonrpc":"2.0"}
+<<<
+Content-Length: 266
+
+{"jsonrpc":"2.0","id":15,"method":"textDocument/codeAction","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino"},"range":{"start":{"line":22,"character":0},"end":{"line":69,"character":1}},"context":{"diagnostics":[]}}}
+>>>
+Content-Length: 37
+
+{"id":15,"result":[],"jsonrpc":"2.0"}
+<<<
+Content-Length: 59
+
+{"jsonrpc":"2.0","id":16,"method":"shutdown","params":null}
+>>>
+Content-Length: 39
+
+{"id":16,"result":null,"jsonrpc":"2.0"}
+<<<
+Content-Length: 47
+
+{"jsonrpc":"2.0","method":"exit","params":null}
+
+
+
+
+
+
+Started logging.
+
+<<<
+Content-Length: 3048
+
+{"jsonrpc":"2.0","id":0,"method":"initialize","params":{"processId":9192,"clientInfo":{"name":"vscode","version":"1.50.0"},"rootPath":"c:\\Users\\ricar\\Desktop\\ApiPrograms\\sonarrr","rootUri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr","capabilities":{"workspace":{"applyEdit":true,"workspaceEdit":{"documentChanges":true,"resourceOperations":["create","rename","delete"],"failureHandling":"textOnlyTransactional"},"didChangeConfiguration":{"dynamicRegistration":true},"didChangeWatchedFiles":{"dynamicRegistration":true},"symbol":{"dynamicRegistration":true,"symbolKind":{"valueSet":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]}},"executeCommand":{"dynamicRegistration":true},"configuration":true,"workspaceFolders":true},"textDocument":{"publishDiagnostics":{"relatedInformation":true,"versionSupport":false,"tagSupport":{"valueSet":[1,2]}},"synchronization":{"dynamicRegistration":true,"willSave":true,"willSaveWaitUntil":true,"didSave":true},"completion":{"dynamicRegistration":true,"contextSupport":true,"completionItem":{"snippetSupport":true,"commitCharactersSupport":true,"documentationFormat":["markdown","plaintext"],"deprecatedSupport":true,"preselectSupport":true,"tagSupport":{"valueSet":[1]}},"completionItemKind":{"valueSet":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]}},"hover":{"dynamicRegistration":true,"contentFormat":["markdown","plaintext"]},"signatureHelp":{"dynamicRegistration":true,"signatureInformation":{"documentationFormat":["markdown","plaintext"],"parameterInformation":{"labelOffsetSupport":true}},"contextSupport":true},"definition":{"dynamicRegistration":true,"linkSupport":true},"references":{"dynamicRegistration":true},"documentHighlight":{"dynamicRegistration":true},"documentSymbol":{"dynamicRegistration":true,"symbolKind":{"valueSet":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]},"hierarchicalDocumentSymbolSupport":true},"codeAction":{"dynamicRegistration":true,"isPreferredSupport":true,"codeActionLiteralSupport":{"codeActionKind":{"valueSet":["","quickfix","refactor","refactor.extract","refactor.inline","refactor.rewrite","source","source.organizeImports"]}}},"codeLens":{"dynamicRegistration":true},"formatting":{"dynamicRegistration":true},"rangeFormatting":{"dynamicRegistration":true},"onTypeFormatting":{"dynamicRegistration":true},"rename":{"dynamicRegistration":true,"prepareSupport":true},"documentLink":{"dynamicRegistration":true,"tooltipSupport":true},"typeDefinition":{"dynamicRegistration":true,"linkSupport":true},"implementation":{"dynamicRegistration":true,"linkSupport":true},"colorProvider":{"dynamicRegistration":true},"foldingRange":{"dynamicRegistration":true,"rangeLimit":5000,"lineFoldingOnly":true},"declaration":{"dynamicRegistration":true,"linkSupport":true},"selectionRange":{"dynamicRegistration":true}},"window":{"workDoneProgress":true}},"initializationOptions":{},"trace":"off","workspaceFolders":[{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr","name":"sonarrr"}]}}
+>>>
+Content-Length: 598
+
+{"id":0,"result":{"capabilities":{"textDocumentSync":2,"hoverProvider":true,"completionProvider":{"triggerCharacters":[".","\u003e",":"]},"signatureHelpProvider":{"triggerCharacters":["(",","]},"definitionProvider":true,"documentHighlightProvider":true,"documentSymbolProvider":true,"workspaceSymbolProvider":true,"codeActionProvider":true,"documentFormattingProvider":true,"documentRangeFormattingProvider":true,"documentOnTypeFormattingProvider":{"firstTriggerCharacter":"\n"},"renameProvider":false,"executeCommandProvider":{"commands":["clangd.applyFix","clangd.applyTweak"]}}},"jsonrpc":"2.0"}
+<<<
+Content-Length: 52
+
+{"jsonrpc":"2.0","method":"initialized","params":{}}Content-Length: 2858
+
+{"jsonrpc":"2.0","method":"textDocument/didOpen","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino","languageId":"cpp","version":1,"text":"#define echoPin1 26\r\n#define trigPin1 27\r\n\r\n#define echoPin2 33\r\n#define trigPin2 25\r\n\r\nint numero = 0;\r\nint DoorWidth = 50; //!CALIBRAR\r\n\r\nbool flag1 = 0;\r\nbool flag2 = 0;\r\n\r\nvoid setup()\r\n{\r\n    pinMode(trigPin1, OUTPUT);\r\n    pinMode(echoPin1, INPUT);\r\n    pinMode(trigPin2, OUTPUT);\r\n    pinMode(echoPin2, INPUT);\r\n\r\n    Serial.begin(9600);\r\n}\r\n\r\nvoid loop()\r\n{\r\n    //?ENTRO/////////////////////////\r\n    if (sonar1() && flag1 == 0)\r\n    {\r\n        flag1 = 1;\r\n        if (flag2 == 0)\r\n        {\r\n            numero++;\r\n        }\r\n    }\r\n    //?.////////////////////////////\r\n\r\n    //!SAIU/////////////////////////\r\n    if (sonar2() && flag2 == 0)\r\n    {\r\n        flag2 = 1;\r\n        if (flag1 == 0)\r\n        {\r\n            numero--;\r\n            numero = numero < 0 ? 0 : numero;\r\n            \r\n        }\r\n    }\r\n    //!.////////////////////////////\r\n\r\n\r\n    if (!sonar1() && !sonar2() && flag1 == 1 && flag2 == 1)\r\n    {\r\n        flag1 = 0, flag2 = 0;\r\n        delay(1000);\r\n    }\r\n\r\n    Serial.print(\"Pessoas: \");\r\n    Serial.print(numero);\r\n    Serial.print(\"  \");\r\n    Serial.print(\"A Luz Ta \");\r\n    \r\n\r\n    if (numero > 0)\r\n    {\r\n        Serial.print(\"LIGADA\");\r\n    }\r\n    else\r\n    {\r\n        Serial.print(\"DESLIGADA\");\r\n    }\r\n}\r\n\r\n\r\nbool sonar1()\r\n{\r\n\r\n    long duration;\r\n    int distance;\r\n    bool Enter = false;\r\n\r\n    digitalWrite(trigPin1, LOW);\r\n    delayMicroseconds(2);\r\n\r\n    digitalWrite(trigPin1, HIGH);\r\n    delayMicroseconds(10);\r\n    digitalWrite(trigPin1, LOW);\r\n\r\n    duration = pulseIn(echoPin1, HIGH);\r\n\r\n    distance = duration * 0.034 / 2;\r\n    \r\n\r\n    Serial.print(distance);\r\n    Serial.print(\"  \");\r\n    \r\n    if (distance <= DoorWidth)\r\n    {\r\n        Enter = true;\r\n        return (Enter);\r\n        \r\n    }\r\n    else\r\n    {\r\n        Enter = false;\r\n        return (Enter);\r\n    }\r\n}\r\n\r\nbool sonar2()\r\n{\r\n    long duration;\r\n    int distance;\r\n    bool Enter = false;\r\n\r\n    digitalWrite(trigPin2, LOW);\r\n    delayMicroseconds(2);\r\n\r\n    digitalWrite(trigPin2, HIGH);\r\n    delayMicroseconds(10);\r\n    digitalWrite(trigPin2, LOW);\r\n\r\n    duration = pulseIn(echoPin2, HIGH);\r\n\r\n    distance = duration * 0.034 / 2;\r\n\r\n\r\n    Serial.println(distance);\r\n    \r\n    if (distance <= DoorWidth)\r\n    {\r\n        Enter = true;\r\n        return (Enter);\r\n        \r\n    }\r\n    else\r\n    {\r\n        Enter = false;\r\n        return (Enter);\r\n    }\r\n}\r\n"}}}Content-Length: 265
+
+{"jsonrpc":"2.0","id":1,"method":"textDocument/codeAction","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino"},"range":{"start":{"line":22,"character":0},"end":{"line":69,"character":1}},"context":{"diagnostics":[]}}}Content-Length: 267
+
+{"jsonrpc":"2.0","id":2,"method":"textDocument/codeAction","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino"},"range":{"start":{"line":25,"character":31},"end":{"line":25,"character":31}},"context":{"diagnostics":[]}}}Content-Length: 62
+
+{"jsonrpc":"2.0","method":"$/cancelRequest","params":{"id":1}}
+>>>
+Content-Length: 111
+
+{"method":"window/workDoneProgress/create","params":{"token":"backgroundIndexProgress"},"id":0,"jsonrpc":"2.0"}Content-Length: 36
+
+{"id":1,"result":[],"jsonrpc":"2.0"}Content-Length: 36
+
+{"id":2,"result":[],"jsonrpc":"2.0"}
+<<<
+Content-Length: 38
+
+{"jsonrpc":"2.0","id":0,"result":null}Content-Length: 194
+
+{"jsonrpc":"2.0","id":3,"method":"textDocument/hover","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino"},"position":{"line":129,"character":15}}}Content-Length: 62
+
+{"jsonrpc":"2.0","method":"$/cancelRequest","params":{"id":3}}
+>>>
+Content-Length: 143
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"title":"indexing","percentage":0,"kind":"begin"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"1/39","percentage":2.5641025641025643,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 38
+
+{"id":3,"result":null,"jsonrpc":"2.0"}
+<<<
+Content-Length: 266
+
+{"jsonrpc":"2.0","id":4,"method":"textDocument/codeAction","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino"},"range":{"start":{"line":72,"character":0},"end":{"line":138,"character":1}},"context":{"diagnostics":[]}}}
+>>>
+Content-Length: 36
+
+{"id":4,"result":[],"jsonrpc":"2.0"}Content-Length: 158
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"2/39","percentage":5.128205128205129,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 158
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"2/39","percentage":5.128205128205129,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"3/39","percentage":7.6923076923076925,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"4/39","percentage":10.256410256410257,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"4/39","percentage":10.256410256410257,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"5/39","percentage":12.820512820512821,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"5/39","percentage":12.820512820512821,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"6/39","percentage":15.384615384615385,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"6/39","percentage":15.384615384615385,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 158
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"7/39","percentage":17.94871794871795,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"8/39","percentage":20.512820512820515,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"8/39","percentage":20.512820512820515,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"9/39","percentage":23.076923076923077,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"9/39","percentage":23.076923076923077,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 160
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"10/39","percentage":25.641025641025642,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 160
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"10/39","percentage":25.641025641025642,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 160
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"11/39","percentage":28.205128205128204,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 160
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"11/39","percentage":28.205128205128204,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"12/39","percentage":30.76923076923077,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"12/39","percentage":30.76923076923077,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 160
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"13/39","percentage":33.333333333333336,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 158
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"14/39","percentage":35.8974358974359,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 158
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"14/39","percentage":35.8974358974359,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"15/39","percentage":38.46153846153846,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"15/39","percentage":38.46153846153846,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"16/39","percentage":41.02564102564103,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"17/39","percentage":43.58974358974359,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"17/39","percentage":43.58974358974359,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"18/39","percentage":46.15384615384615,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"18/39","percentage":46.15384615384615,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 160
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"19/39","percentage":48.717948717948715,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 160
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"19/39","percentage":48.717948717948715,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 160
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"20/39","percentage":51.282051282051285,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 160
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"20/39","percentage":51.282051282051285,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"21/39","percentage":53.84615384615385,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"21/39","percentage":53.84615384615385,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"22/39","percentage":56.41025641025641,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"23/39","percentage":58.97435897435897,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"23/39","percentage":58.97435897435897,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"24/39","percentage":61.53846153846154,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 158
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"25/39","percentage":64.1025641025641,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"26/39","percentage":66.66666666666667,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"26/39","percentage":66.66666666666667,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"27/39","percentage":69.23076923076923,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 158
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"28/39","percentage":71.7948717948718,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 158
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"28/39","percentage":71.7948717948718,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"29/39","percentage":74.35897435897436,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"29/39","percentage":74.35897435897436,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"30/39","percentage":76.92307692307692,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"30/39","percentage":76.92307692307692,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"31/39","percentage":79.48717948717949,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"32/39","percentage":82.05128205128206,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"32/39","percentage":82.05128205128206,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"33/39","percentage":84.61538461538461,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"33/39","percentage":84.61538461538461,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"34/39","percentage":87.17948717948718,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"34/39","percentage":87.17948717948718,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"35/39","percentage":89.74358974358974,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 158
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"36/39","percentage":92.3076923076923,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"37/39","percentage":94.87179487179488,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"38/39","percentage":97.43589743589743,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 107
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"kind":"end"}},"jsonrpc":"2.0"}
+<<<
+Content-Length: 58
+
+{"jsonrpc":"2.0","id":5,"method":"shutdown","params":null}
+>>>
+Content-Length: 38
+
+{"id":5,"result":null,"jsonrpc":"2.0"}
+<<<
+Content-Length: 47
+
+{"jsonrpc":"2.0","method":"exit","params":null}
+
+
+
+
+
+
+Started logging.
+
+<<<
+Content-Length: 3049
+
+{"jsonrpc":"2.0","id":0,"method":"initialize","params":{"processId":12128,"clientInfo":{"name":"vscode","version":"1.50.0"},"rootPath":"c:\\Users\\ricar\\Desktop\\ApiPrograms\\sonarrr","rootUri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr","capabilities":{"workspace":{"applyEdit":true,"workspaceEdit":{"documentChanges":true,"resourceOperations":["create","rename","delete"],"failureHandling":"textOnlyTransactional"},"didChangeConfiguration":{"dynamicRegistration":true},"didChangeWatchedFiles":{"dynamicRegistration":true},"symbol":{"dynamicRegistration":true,"symbolKind":{"valueSet":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]}},"executeCommand":{"dynamicRegistration":true},"configuration":true,"workspaceFolders":true},"textDocument":{"publishDiagnostics":{"relatedInformation":true,"versionSupport":false,"tagSupport":{"valueSet":[1,2]}},"synchronization":{"dynamicRegistration":true,"willSave":true,"willSaveWaitUntil":true,"didSave":true},"completion":{"dynamicRegistration":true,"contextSupport":true,"completionItem":{"snippetSupport":true,"commitCharactersSupport":true,"documentationFormat":["markdown","plaintext"],"deprecatedSupport":true,"preselectSupport":true,"tagSupport":{"valueSet":[1]}},"completionItemKind":{"valueSet":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]}},"hover":{"dynamicRegistration":true,"contentFormat":["markdown","plaintext"]},"signatureHelp":{"dynamicRegistration":true,"signatureInformation":{"documentationFormat":["markdown","plaintext"],"parameterInformation":{"labelOffsetSupport":true}},"contextSupport":true},"definition":{"dynamicRegistration":true,"linkSupport":true},"references":{"dynamicRegistration":true},"documentHighlight":{"dynamicRegistration":true},"documentSymbol":{"dynamicRegistration":true,"symbolKind":{"valueSet":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]},"hierarchicalDocumentSymbolSupport":true},"codeAction":{"dynamicRegistration":true,"isPreferredSupport":true,"codeActionLiteralSupport":{"codeActionKind":{"valueSet":["","quickfix","refactor","refactor.extract","refactor.inline","refactor.rewrite","source","source.organizeImports"]}}},"codeLens":{"dynamicRegistration":true},"formatting":{"dynamicRegistration":true},"rangeFormatting":{"dynamicRegistration":true},"onTypeFormatting":{"dynamicRegistration":true},"rename":{"dynamicRegistration":true,"prepareSupport":true},"documentLink":{"dynamicRegistration":true,"tooltipSupport":true},"typeDefinition":{"dynamicRegistration":true,"linkSupport":true},"implementation":{"dynamicRegistration":true,"linkSupport":true},"colorProvider":{"dynamicRegistration":true},"foldingRange":{"dynamicRegistration":true,"rangeLimit":5000,"lineFoldingOnly":true},"declaration":{"dynamicRegistration":true,"linkSupport":true},"selectionRange":{"dynamicRegistration":true}},"window":{"workDoneProgress":true}},"initializationOptions":{},"trace":"off","workspaceFolders":[{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr","name":"sonarrr"}]}}
+>>>
+Content-Length: 598
+
+{"id":0,"result":{"capabilities":{"textDocumentSync":2,"hoverProvider":true,"completionProvider":{"triggerCharacters":[".","\u003e",":"]},"signatureHelpProvider":{"triggerCharacters":["(",","]},"definitionProvider":true,"documentHighlightProvider":true,"documentSymbolProvider":true,"workspaceSymbolProvider":true,"codeActionProvider":true,"documentFormattingProvider":true,"documentRangeFormattingProvider":true,"documentOnTypeFormattingProvider":{"firstTriggerCharacter":"\n"},"renameProvider":false,"executeCommandProvider":{"commands":["clangd.applyFix","clangd.applyTweak"]}}},"jsonrpc":"2.0"}
+<<<
+Content-Length: 52
+
+{"jsonrpc":"2.0","method":"initialized","params":{}}Content-Length: 2858
+
+{"jsonrpc":"2.0","method":"textDocument/didOpen","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino","languageId":"cpp","version":1,"text":"#define echoPin1 26\r\n#define trigPin1 27\r\n\r\n#define echoPin2 33\r\n#define trigPin2 25\r\n\r\nint numero = 0;\r\nint DoorWidth = 50; //!CALIBRAR\r\n\r\nbool flag1 = 0;\r\nbool flag2 = 0;\r\n\r\nvoid setup()\r\n{\r\n    pinMode(trigPin1, OUTPUT);\r\n    pinMode(echoPin1, INPUT);\r\n    pinMode(trigPin2, OUTPUT);\r\n    pinMode(echoPin2, INPUT);\r\n\r\n    Serial.begin(9600);\r\n}\r\n\r\nvoid loop()\r\n{\r\n    //?ENTRO/////////////////////////\r\n    if (sonar1() && flag1 == 0)\r\n    {\r\n        flag1 = 1;\r\n        if (flag2 == 0)\r\n        {\r\n            numero++;\r\n        }\r\n    }\r\n    //?.////////////////////////////\r\n\r\n    //!SAIU/////////////////////////\r\n    if (sonar2() && flag2 == 0)\r\n    {\r\n        flag2 = 1;\r\n        if (flag1 == 0)\r\n        {\r\n            numero--;\r\n            numero = numero < 0 ? 0 : numero;\r\n            \r\n        }\r\n    }\r\n    //!.////////////////////////////\r\n\r\n\r\n    if (!sonar1() && !sonar2() && flag1 == 1 && flag2 == 1)\r\n    {\r\n        flag1 = 0, flag2 = 0;\r\n        delay(1000);\r\n    }\r\n\r\n    Serial.print(\"Pessoas: \");\r\n    Serial.print(numero);\r\n    Serial.print(\"  \");\r\n    Serial.print(\"A Luz Ta \");\r\n    \r\n\r\n    if (numero > 0)\r\n    {\r\n        Serial.print(\"LIGADA\");\r\n    }\r\n    else\r\n    {\r\n        Serial.print(\"DESLIGADA\");\r\n    }\r\n}\r\n\r\n\r\nbool sonar1()\r\n{\r\n\r\n    long duration;\r\n    int distance;\r\n    bool Enter = false;\r\n\r\n    digitalWrite(trigPin1, LOW);\r\n    delayMicroseconds(2);\r\n\r\n    digitalWrite(trigPin1, HIGH);\r\n    delayMicroseconds(10);\r\n    digitalWrite(trigPin1, LOW);\r\n\r\n    duration = pulseIn(echoPin1, HIGH);\r\n\r\n    distance = duration * 0.034 / 2;\r\n    \r\n\r\n    Serial.print(distance);\r\n    Serial.print(\"  \");\r\n    \r\n    if (distance <= DoorWidth)\r\n    {\r\n        Enter = true;\r\n        return (Enter);\r\n        \r\n    }\r\n    else\r\n    {\r\n        Enter = false;\r\n        return (Enter);\r\n    }\r\n}\r\n\r\nbool sonar2()\r\n{\r\n    long duration;\r\n    int distance;\r\n    bool Enter = false;\r\n\r\n    digitalWrite(trigPin2, LOW);\r\n    delayMicroseconds(2);\r\n\r\n    digitalWrite(trigPin2, HIGH);\r\n    delayMicroseconds(10);\r\n    digitalWrite(trigPin2, LOW);\r\n\r\n    duration = pulseIn(echoPin2, HIGH);\r\n\r\n    distance = duration * 0.034 / 2;\r\n\r\n\r\n    Serial.println(distance);\r\n    \r\n    if (distance <= DoorWidth)\r\n    {\r\n        Enter = true;\r\n        return (Enter);\r\n        \r\n    }\r\n    else\r\n    {\r\n        Enter = false;\r\n        return (Enter);\r\n    }\r\n}\r\n"}}}Content-Length: 266
+
+{"jsonrpc":"2.0","id":1,"method":"textDocument/codeAction","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino"},"range":{"start":{"line":72,"character":0},"end":{"line":138,"character":1}},"context":{"diagnostics":[]}}}
+>>>
+Content-Length: 111
+
+{"method":"window/workDoneProgress/create","params":{"token":"backgroundIndexProgress"},"id":0,"jsonrpc":"2.0"}Content-Length: 36
+
+{"id":1,"result":[],"jsonrpc":"2.0"}
+<<<
+Content-Length: 38
+
+{"jsonrpc":"2.0","id":0,"result":null}
+>>>
+Content-Length: 143
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"title":"indexing","percentage":0,"kind":"begin"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"1/39","percentage":2.5641025641025643,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 158
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"2/39","percentage":5.128205128205129,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 158
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"2/39","percentage":5.128205128205129,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"3/39","percentage":7.6923076923076925,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"3/39","percentage":7.6923076923076925,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"4/39","percentage":10.256410256410257,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"4/39","percentage":10.256410256410257,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"5/39","percentage":12.820512820512821,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"5/39","percentage":12.820512820512821,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"6/39","percentage":15.384615384615385,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"6/39","percentage":15.384615384615385,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 158
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"7/39","percentage":17.94871794871795,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 158
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"7/39","percentage":17.94871794871795,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"8/39","percentage":20.512820512820515,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"8/39","percentage":20.512820512820515,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"9/39","percentage":23.076923076923077,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"9/39","percentage":23.076923076923077,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 160
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"10/39","percentage":25.641025641025642,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 160
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"10/39","percentage":25.641025641025642,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 160
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"11/39","percentage":28.205128205128204,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 160
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"11/39","percentage":28.205128205128204,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"12/39","percentage":30.76923076923077,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"12/39","percentage":30.76923076923077,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 160
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"13/39","percentage":33.333333333333336,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 160
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"13/39","percentage":33.333333333333336,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 158
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"14/39","percentage":35.8974358974359,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 158
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"14/39","percentage":35.8974358974359,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"15/39","percentage":38.46153846153846,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"15/39","percentage":38.46153846153846,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"16/39","percentage":41.02564102564103,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"16/39","percentage":41.02564102564103,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"17/39","percentage":43.58974358974359,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"17/39","percentage":43.58974358974359,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"18/39","percentage":46.15384615384615,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"18/39","percentage":46.15384615384615,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 160
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"19/39","percentage":48.717948717948715,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 160
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"19/39","percentage":48.717948717948715,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 160
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"20/39","percentage":51.282051282051285,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 160
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"20/39","percentage":51.282051282051285,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"21/39","percentage":53.84615384615385,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"21/39","percentage":53.84615384615385,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"22/39","percentage":56.41025641025641,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"22/39","percentage":56.41025641025641,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"23/39","percentage":58.97435897435897,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"23/39","percentage":58.97435897435897,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"24/39","percentage":61.53846153846154,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"24/39","percentage":61.53846153846154,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 158
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"25/39","percentage":64.1025641025641,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 158
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"25/39","percentage":64.1025641025641,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"26/39","percentage":66.66666666666667,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"27/39","percentage":69.23076923076923,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"27/39","percentage":69.23076923076923,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 158
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"28/39","percentage":71.7948717948718,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 158
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"28/39","percentage":71.7948717948718,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"29/39","percentage":74.35897435897436,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"29/39","percentage":74.35897435897436,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"30/39","percentage":76.92307692307692,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"30/39","percentage":76.92307692307692,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"31/39","percentage":79.48717948717949,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"31/39","percentage":79.48717948717949,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"32/39","percentage":82.05128205128206,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"32/39","percentage":82.05128205128206,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"33/39","percentage":84.61538461538461,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"34/39","percentage":87.17948717948718,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"34/39","percentage":87.17948717948718,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"35/39","percentage":89.74358974358974,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"35/39","percentage":89.74358974358974,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 158
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"36/39","percentage":92.3076923076923,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"37/39","percentage":94.87179487179488,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 159
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"38/39","percentage":97.43589743589743,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 107
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"kind":"end"}},"jsonrpc":"2.0"}
+<<<
+Content-Length: 267
+
+{"jsonrpc":"2.0","id":2,"method":"textDocument/codeAction","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino"},"range":{"start":{"line":72,"character":13},"end":{"line":72,"character":13}},"context":{"diagnostics":[]}}}
+>>>
+Content-Length: 36
+
+{"id":2,"result":[],"jsonrpc":"2.0"}
+<<<
+Content-Length: 192
+
+{"jsonrpc":"2.0","id":3,"method":"textDocument/hover","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino"},"position":{"line":51,"character":1}}}
+>>>
+Content-Length: 38
+
+{"id":3,"result":null,"jsonrpc":"2.0"}
+<<<
+Content-Length: 267
+
+{"jsonrpc":"2.0","id":4,"method":"textDocument/codeAction","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino"},"range":{"start":{"line":19,"character":23},"end":{"line":19,"character":23}},"context":{"diagnostics":[]}}}
+>>>
+Content-Length: 36
+
+{"id":4,"result":[],"jsonrpc":"2.0"}
+<<<
+Content-Length: 266
+
+{"jsonrpc":"2.0","id":5,"method":"textDocument/codeAction","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino"},"range":{"start":{"line":14,"character":4},"end":{"line":19,"character":23}},"context":{"diagnostics":[]}}}
+>>>
+Content-Length: 389
+
+{"id":5,"result":[{"title":"Extract to function","kind":"refactor","command":{"title":"Extract to function","command":"clangd.applyTweak","arguments":[{"tweakID":"ExtractFunction","file":"file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server752676171/sketch/sonarrr.ino.cpp","selection":{"start":{"line":25,"character":4},"end":{"line":30,"character":23}}}]}}],"jsonrpc":"2.0"}
+<<<
+Content-Length: 267
+
+{"jsonrpc":"2.0","id":6,"method":"textDocument/codeAction","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino"},"range":{"start":{"line":15,"character":29},"end":{"line":15,"character":29}},"context":{"diagnostics":[]}}}
+>>>
+Content-Length: 36
+
+{"id":6,"result":[],"jsonrpc":"2.0"}
+<<<
+Content-Length: 266
+
+{"jsonrpc":"2.0","id":7,"method":"textDocument/codeAction","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino"},"range":{"start":{"line":14,"character":4},"end":{"line":19,"character":23}},"context":{"diagnostics":[]}}}
+>>>
+Content-Length: 389
+
+{"id":7,"result":[{"title":"Extract to function","kind":"refactor","command":{"title":"Extract to function","command":"clangd.applyTweak","arguments":[{"tweakID":"ExtractFunction","file":"file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server752676171/sketch/sonarrr.ino.cpp","selection":{"start":{"line":25,"character":4},"end":{"line":30,"character":23}}}]}}],"jsonrpc":"2.0"}
+<<<
+Content-Length: 192
+
+{"jsonrpc":"2.0","id":8,"method":"textDocument/hover","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino"},"position":{"line":14,"character":3}}}
+>>>
+Content-Length: 38
+
+{"id":8,"result":null,"jsonrpc":"2.0"}
+<<<
+Content-Length: 266
+
+{"jsonrpc":"2.0","id":9,"method":"textDocument/codeAction","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino"},"range":{"start":{"line":14,"character":3},"end":{"line":19,"character":23}},"context":{"diagnostics":[]}}}
+>>>
+Content-Length: 389
+
+{"id":9,"result":[{"title":"Extract to function","kind":"refactor","command":{"title":"Extract to function","command":"clangd.applyTweak","arguments":[{"tweakID":"ExtractFunction","file":"file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server752676171/sketch/sonarrr.ino.cpp","selection":{"start":{"line":25,"character":3},"end":{"line":30,"character":23}}}]}}],"jsonrpc":"2.0"}
+<<<
+Content-Length: 713
+
+{"jsonrpc":"2.0","method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino","version":2},"contentChanges":[{"range":{"start":{"line":19,"character":0},"end":{"line":19,"character":4}},"rangeLength":4,"text":"  "},{"range":{"start":{"line":17,"character":0},"end":{"line":17,"character":4}},"rangeLength":4,"text":"  "},{"range":{"start":{"line":16,"character":0},"end":{"line":16,"character":4}},"rangeLength":4,"text":"  "},{"range":{"start":{"line":15,"character":0},"end":{"line":15,"character":4}},"rangeLength":4,"text":"  "},{"range":{"start":{"line":14,"character":0},"end":{"line":14,"character":4}},"rangeLength":4,"text":"  "}]}}Content-Length: 267
+
+{"jsonrpc":"2.0","id":10,"method":"textDocument/codeAction","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino"},"range":{"start":{"line":14,"character":2},"end":{"line":19,"character":21}},"context":{"diagnostics":[]}}}
+>>>
+Content-Length: 390
+
+{"id":10,"result":[{"title":"Extract to function","kind":"refactor","command":{"title":"Extract to function","command":"clangd.applyTweak","arguments":[{"tweakID":"ExtractFunction","file":"file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server752676171/sketch/sonarrr.ino.cpp","selection":{"start":{"line":25,"character":2},"end":{"line":30,"character":21}}}]}}],"jsonrpc":"2.0"}
+<<<
+Content-Length: 162
+
+{"jsonrpc":"2.0","method":"textDocument/didSave","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino","version":2}}}
+>>>
+Content-Length: 116
+
+{"method":"window/workDoneProgress/create","params":{"token":"arduinoLanguageServerRebuild"},"id":1,"jsonrpc":"2.0"}
+<<<
+Content-Length: 38
+
+{"jsonrpc":"2.0","id":1,"result":null}
+>>>
+Content-Length: 140
+
+{"method":"$/progress","params":{"token":"arduinoLanguageServerRebuild","value":{"title":"Building sketch","kind":"begin"}},"jsonrpc":"2.0"}Content-Length: 138
+
+{"method":"$/progress","params":{"token":"arduinoLanguageServerRebuild","value":{"message":"compiling.","kind":"report"}},"jsonrpc":"2.0"}Content-Length: 139
+
+{"method":"$/progress","params":{"token":"arduinoLanguageServerRebuild","value":{"message":"compiling..","kind":"report"}},"jsonrpc":"2.0"}Content-Length: 140
+
+{"method":"$/progress","params":{"token":"arduinoLanguageServerRebuild","value":{"message":"compiling...","kind":"report"}},"jsonrpc":"2.0"}Content-Length: 138
+
+{"method":"$/progress","params":{"token":"arduinoLanguageServerRebuild","value":{"message":"compiling.","kind":"report"}},"jsonrpc":"2.0"}Content-Length: 139
+
+{"method":"$/progress","params":{"token":"arduinoLanguageServerRebuild","value":{"message":"compiling..","kind":"report"}},"jsonrpc":"2.0"}Content-Length: 140
+
+{"method":"$/progress","params":{"token":"arduinoLanguageServerRebuild","value":{"message":"compiling...","kind":"report"}},"jsonrpc":"2.0"}Content-Length: 138
+
+{"method":"$/progress","params":{"token":"arduinoLanguageServerRebuild","value":{"message":"compiling.","kind":"report"}},"jsonrpc":"2.0"}Content-Length: 139
+
+{"method":"$/progress","params":{"token":"arduinoLanguageServerRebuild","value":{"message":"compiling..","kind":"report"}},"jsonrpc":"2.0"}Content-Length: 140
+
+{"method":"$/progress","params":{"token":"arduinoLanguageServerRebuild","value":{"message":"compiling...","kind":"report"}},"jsonrpc":"2.0"}Content-Length: 138
+
+{"method":"$/progress","params":{"token":"arduinoLanguageServerRebuild","value":{"message":"compiling.","kind":"report"}},"jsonrpc":"2.0"}Content-Length: 139
+
+{"method":"$/progress","params":{"token":"arduinoLanguageServerRebuild","value":{"message":"compiling..","kind":"report"}},"jsonrpc":"2.0"}Content-Length: 140
+
+{"method":"$/progress","params":{"token":"arduinoLanguageServerRebuild","value":{"message":"compiling...","kind":"report"}},"jsonrpc":"2.0"}Content-Length: 138
+
+{"method":"$/progress","params":{"token":"arduinoLanguageServerRebuild","value":{"message":"compiling.","kind":"report"}},"jsonrpc":"2.0"}Content-Length: 139
+
+{"method":"$/progress","params":{"token":"arduinoLanguageServerRebuild","value":{"message":"compiling..","kind":"report"}},"jsonrpc":"2.0"}Content-Length: 140
+
+{"method":"$/progress","params":{"token":"arduinoLanguageServerRebuild","value":{"message":"compiling...","kind":"report"}},"jsonrpc":"2.0"}Content-Length: 138
+
+{"method":"$/progress","params":{"token":"arduinoLanguageServerRebuild","value":{"message":"compiling.","kind":"report"}},"jsonrpc":"2.0"}Content-Length: 139
+
+{"method":"$/progress","params":{"token":"arduinoLanguageServerRebuild","value":{"message":"compiling..","kind":"report"}},"jsonrpc":"2.0"}Content-Length: 140
+
+{"method":"$/progress","params":{"token":"arduinoLanguageServerRebuild","value":{"message":"compiling...","kind":"report"}},"jsonrpc":"2.0"}Content-Length: 129
+
+{"method":"$/progress","params":{"token":"arduinoLanguageServerRebuild","value":{"message":"done","kind":"end"}},"jsonrpc":"2.0"}Content-Length: 111
+
+{"method":"window/workDoneProgress/create","params":{"token":"backgroundIndexProgress"},"id":2,"jsonrpc":"2.0"}
+<<<
+Content-Length: 38
+
+{"jsonrpc":"2.0","id":2,"result":null}
+>>>
+Content-Length: 143
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"title":"indexing","percentage":0,"kind":"begin"}},"jsonrpc":"2.0"}Content-Length: 141
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"0/1","percentage":0,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 141
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"message":"0/1","percentage":0,"kind":"report"}},"jsonrpc":"2.0"}Content-Length: 107
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"kind":"end"}},"jsonrpc":"2.0"}
+<<<
+Content-Length: 266
+
+{"jsonrpc":"2.0","id":11,"method":"textDocument/codeAction","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino"},"range":{"start":{"line":26,"character":5},"end":{"line":26,"character":5}},"context":{"diagnostics":[]}}}
+>>>
+Content-Length: 37
+
+{"id":11,"result":[],"jsonrpc":"2.0"}
+<<<
+Content-Length: 194
+
+{"jsonrpc":"2.0","id":12,"method":"textDocument/hover","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino"},"position":{"line":67,"character":24}}}
+>>>
+Content-Length: 39
+
+{"id":12,"result":null,"jsonrpc":"2.0"}
+<<<
+Content-Length: 59
+
+{"jsonrpc":"2.0","id":13,"method":"shutdown","params":null}
+>>>
+Content-Length: 39
+
+{"id":13,"result":null,"jsonrpc":"2.0"}
+<<<
+Content-Length: 47
+
+{"jsonrpc":"2.0","method":"exit","params":null}
+
+
+
+
+
+
+Started logging.
+
+<<<
+Content-Length: 3048
+
+{"jsonrpc":"2.0","id":0,"method":"initialize","params":{"processId":6768,"clientInfo":{"name":"vscode","version":"1.50.0"},"rootPath":"c:\\Users\\ricar\\Desktop\\ApiPrograms\\sonarrr","rootUri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr","capabilities":{"workspace":{"applyEdit":true,"workspaceEdit":{"documentChanges":true,"resourceOperations":["create","rename","delete"],"failureHandling":"textOnlyTransactional"},"didChangeConfiguration":{"dynamicRegistration":true},"didChangeWatchedFiles":{"dynamicRegistration":true},"symbol":{"dynamicRegistration":true,"symbolKind":{"valueSet":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]}},"executeCommand":{"dynamicRegistration":true},"configuration":true,"workspaceFolders":true},"textDocument":{"publishDiagnostics":{"relatedInformation":true,"versionSupport":false,"tagSupport":{"valueSet":[1,2]}},"synchronization":{"dynamicRegistration":true,"willSave":true,"willSaveWaitUntil":true,"didSave":true},"completion":{"dynamicRegistration":true,"contextSupport":true,"completionItem":{"snippetSupport":true,"commitCharactersSupport":true,"documentationFormat":["markdown","plaintext"],"deprecatedSupport":true,"preselectSupport":true,"tagSupport":{"valueSet":[1]}},"completionItemKind":{"valueSet":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]}},"hover":{"dynamicRegistration":true,"contentFormat":["markdown","plaintext"]},"signatureHelp":{"dynamicRegistration":true,"signatureInformation":{"documentationFormat":["markdown","plaintext"],"parameterInformation":{"labelOffsetSupport":true}},"contextSupport":true},"definition":{"dynamicRegistration":true,"linkSupport":true},"references":{"dynamicRegistration":true},"documentHighlight":{"dynamicRegistration":true},"documentSymbol":{"dynamicRegistration":true,"symbolKind":{"valueSet":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]},"hierarchicalDocumentSymbolSupport":true},"codeAction":{"dynamicRegistration":true,"isPreferredSupport":true,"codeActionLiteralSupport":{"codeActionKind":{"valueSet":["","quickfix","refactor","refactor.extract","refactor.inline","refactor.rewrite","source","source.organizeImports"]}}},"codeLens":{"dynamicRegistration":true},"formatting":{"dynamicRegistration":true},"rangeFormatting":{"dynamicRegistration":true},"onTypeFormatting":{"dynamicRegistration":true},"rename":{"dynamicRegistration":true,"prepareSupport":true},"documentLink":{"dynamicRegistration":true,"tooltipSupport":true},"typeDefinition":{"dynamicRegistration":true,"linkSupport":true},"implementation":{"dynamicRegistration":true,"linkSupport":true},"colorProvider":{"dynamicRegistration":true},"foldingRange":{"dynamicRegistration":true,"rangeLimit":5000,"lineFoldingOnly":true},"declaration":{"dynamicRegistration":true,"linkSupport":true},"selectionRange":{"dynamicRegistration":true}},"window":{"workDoneProgress":true}},"initializationOptions":{},"trace":"off","workspaceFolders":[{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr","name":"sonarrr"}]}}
+>>>
+Content-Length: 598
+
+{"id":0,"result":{"capabilities":{"textDocumentSync":2,"hoverProvider":true,"completionProvider":{"triggerCharacters":[".","\u003e",":"]},"signatureHelpProvider":{"triggerCharacters":["(",","]},"definitionProvider":true,"documentHighlightProvider":true,"documentSymbolProvider":true,"workspaceSymbolProvider":true,"codeActionProvider":true,"documentFormattingProvider":true,"documentRangeFormattingProvider":true,"documentOnTypeFormattingProvider":{"firstTriggerCharacter":"\n"},"renameProvider":false,"executeCommandProvider":{"commands":["clangd.applyFix","clangd.applyTweak"]}}},"jsonrpc":"2.0"}
+<<<
+Content-Length: 52
+
+{"jsonrpc":"2.0","method":"initialized","params":{}}Content-Length: 2848
+
+{"jsonrpc":"2.0","method":"textDocument/didOpen","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino","languageId":"cpp","version":1,"text":"#define echoPin1 26\r\n#define trigPin1 27\r\n\r\n#define echoPin2 33\r\n#define trigPin2 25\r\n\r\nint numero = 0;\r\nint DoorWidth = 50; //!CALIBRAR\r\n\r\nbool flag1 = 0;\r\nbool flag2 = 0;\r\n\r\nvoid setup()\r\n{\r\n  pinMode(trigPin1, OUTPUT);\r\n  pinMode(echoPin1, INPUT);\r\n  pinMode(trigPin2, OUTPUT);\r\n  pinMode(echoPin2, INPUT);\r\n\r\n  Serial.begin(9600);\r\n}\r\n\r\nvoid loop()\r\n{\r\n    //?ENTRO/////////////////////////\r\n    if (sonar1() && flag1 == 0)\r\n    {\r\n        flag1 = 1;\r\n        if (flag2 == 0)\r\n        {\r\n            numero++;\r\n        }\r\n    }\r\n    //?.////////////////////////////\r\n\r\n    //!SAIU/////////////////////////\r\n    if (sonar2() && flag2 == 0)\r\n    {\r\n        flag2 = 1;\r\n        if (flag1 == 0)\r\n        {\r\n            numero--;\r\n            numero = numero < 0 ? 0 : numero;\r\n            \r\n        }\r\n    }\r\n    //!.////////////////////////////\r\n\r\n\r\n    if (!sonar1() && !sonar2() && flag1 == 1 && flag2 == 1)\r\n    {\r\n        flag1 = 0, flag2 = 0;\r\n        delay(1000);\r\n    }\r\n\r\n    Serial.print(\"Pessoas: \");\r\n    Serial.print(numero);\r\n    Serial.print(\"  \");\r\n    Serial.print(\"A Luz Ta \");\r\n    \r\n\r\n    if (numero > 0)\r\n    {\r\n        Serial.print(\"LIGADA\");\r\n    }\r\n    else\r\n    {\r\n        Serial.print(\"DESLIGADA\");\r\n    }\r\n}\r\n\r\n\r\nbool sonar1()\r\n{\r\n\r\n    long duration;\r\n    int distance;\r\n    bool Enter = false;\r\n\r\n    digitalWrite(trigPin1, LOW);\r\n    delayMicroseconds(2);\r\n\r\n    digitalWrite(trigPin1, HIGH);\r\n    delayMicroseconds(10);\r\n    digitalWrite(trigPin1, LOW);\r\n\r\n    duration = pulseIn(echoPin1, HIGH);\r\n\r\n    distance = duration * 0.034 / 2;\r\n    \r\n\r\n    Serial.print(distance);\r\n    Serial.print(\"  \");\r\n    \r\n    if (distance <= DoorWidth)\r\n    {\r\n        Enter = true;\r\n        return (Enter);\r\n        \r\n    }\r\n    else\r\n    {\r\n        Enter = false;\r\n        return (Enter);\r\n    }\r\n}\r\n\r\nbool sonar2()\r\n{\r\n    long duration;\r\n    int distance;\r\n    bool Enter = false;\r\n\r\n    digitalWrite(trigPin2, LOW);\r\n    delayMicroseconds(2);\r\n\r\n    digitalWrite(trigPin2, HIGH);\r\n    delayMicroseconds(10);\r\n    digitalWrite(trigPin2, LOW);\r\n\r\n    duration = pulseIn(echoPin2, HIGH);\r\n\r\n    distance = duration * 0.034 / 2;\r\n\r\n\r\n    Serial.println(distance);\r\n    \r\n    if (distance <= DoorWidth)\r\n    {\r\n        Enter = true;\r\n        return (Enter);\r\n        \r\n    }\r\n    else\r\n    {\r\n        Enter = false;\r\n        return (Enter);\r\n    }\r\n}\r\n"}}}Content-Length: 265
+
+{"jsonrpc":"2.0","id":1,"method":"textDocument/codeAction","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino"},"range":{"start":{"line":26,"character":5},"end":{"line":26,"character":5}},"context":{"diagnostics":[]}}}Content-Length: 76
+
+{"jsonrpc":"2.0","method":"$/setTraceNotification","params":{"value":"off"}}Content-Length: 76
+
+{"jsonrpc":"2.0","method":"$/setTraceNotification","params":{"value":"off"}}Content-Length: 76
+
+{"jsonrpc":"2.0","method":"$/setTraceNotification","params":{"value":"off"}}Content-Length: 76
+
+{"jsonrpc":"2.0","method":"$/setTraceNotification","params":{"value":"off"}}
+>>>
+Content-Length: 111
+
+{"method":"window/workDoneProgress/create","params":{"token":"backgroundIndexProgress"},"id":0,"jsonrpc":"2.0"}Content-Length: 36
+
+{"id":1,"result":[],"jsonrpc":"2.0"}
+<<<
+Content-Length: 38
+
+{"jsonrpc":"2.0","id":0,"result":null}
+>>>
+Content-Length: 143
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"title":"indexing","percentage":0,"kind":"begin"}},"jsonrpc":"2.0"}Content-Length: 107
+
+{"method":"$/progress","params":{"token":"backgroundIndexProgress","value":{"kind":"end"}},"jsonrpc":"2.0"}Content-Length: 3722
+
+{"method":"textDocument/publishDiagnostics","params":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino","diagnostics":[{"range":{"start":{"line":14,"character":20},"end":{"line":14,"character":26}},"severity":1,"code":"undeclared_var_use","source":"clang","message":"Use of undeclared identifier 'OUTPUT'"},{"range":{"start":{"line":15,"character":20},"end":{"line":15,"character":25}},"severity":1,"code":"undeclared_var_use","source":"clang","message":"Use of undeclared identifier 'INPUT'"},{"range":{"start":{"line":16,"character":20},"end":{"line":16,"character":26}},"severity":1,"code":"undeclared_var_use","source":"clang","message":"Use of undeclared identifier 'OUTPUT'"},{"range":{"start":{"line":17,"character":20},"end":{"line":17,"character":25}},"severity":1,"code":"undeclared_var_use","source":"clang","message":"Use of undeclared identifier 'INPUT'"},{"range":{"start":{"line":19,"character":2},"end":{"line":19,"character":8}},"severity":1,"code":"undeclared_var_use","source":"clang","message":"Use of undeclared identifier 'Serial'"},{"range":{"start":{"line":25,"character":8},"end":{"line":25,"character":14}},"severity":1,"code":"undeclared_var_use","source":"clang","message":"Use of undeclared identifier 'sonar1'"},{"range":{"start":{"line":36,"character":8},"end":{"line":36,"character":14}},"severity":1,"code":"undeclared_var_use","source":"clang","message":"Use of undeclared identifier 'sonar2'"},{"range":{"start":{"line":49,"character":9},"end":{"line":49,"character":15}},"severity":1,"code":"undeclared_var_use","source":"clang","message":"Use of undeclared identifier 'sonar1'"},{"range":{"start":{"line":49,"character":22},"end":{"line":49,"character":28}},"severity":1,"code":"undeclared_var_use","source":"clang","message":"Use of undeclared identifier 'sonar2'"},{"range":{"start":{"line":52,"character":8},"end":{"line":52,"character":13}},"severity":1,"code":"undeclared_var_use","source":"clang","message":"Use of undeclared identifier 'delay'"},{"range":{"start":{"line":55,"character":4},"end":{"line":55,"character":10}},"severity":1,"code":"undeclared_var_use","source":"clang","message":"Use of undeclared identifier 'Serial'"},{"range":{"start":{"line":56,"character":4},"end":{"line":56,"character":10}},"severity":1,"code":"undeclared_var_use","source":"clang","message":"Use of undeclared identifier 'Serial'"},{"range":{"start":{"line":57,"character":4},"end":{"line":57,"character":10}},"severity":1,"code":"undeclared_var_use","source":"clang","message":"Use of undeclared identifier 'Serial'"},{"range":{"start":{"line":58,"character":4},"end":{"line":58,"character":10}},"severity":1,"code":"undeclared_var_use","source":"clang","message":"Use of undeclared identifier 'Serial'"},{"range":{"start":{"line":63,"character":8},"end":{"line":63,"character":14}},"severity":1,"code":"undeclared_var_use","source":"clang","message":"Use of undeclared identifier 'Serial'"},{"range":{"start":{"line":67,"character":8},"end":{"line":67,"character":14}},"severity":1,"code":"undeclared_var_use","source":"clang","message":"Use of undeclared identifier 'Serial'"},{"range":{"start":{"line":79,"character":27},"end":{"line":79,"character":30}},"severity":1,"code":"undeclared_var_use","source":"clang","message":"Use of undeclared identifier 'LOW'"},{"range":{"start":{"line":80,"character":4},"end":{"line":80,"character":21}},"severity":1,"code":"undeclared_var_use","source":"clang","message":"Use of undeclared identifier 'delayMicroseconds'"},{"range":{"start":{"line":82,"character":27},"end":{"line":82,"character":31}},"severity":1,"code":"undeclared_var_use","source":"clang","message":"Use of undeclared identifier 'HIGH'"}]},"jsonrpc":"2.0"}
+<<<
+Content-Length: 265
+
+{"jsonrpc":"2.0","id":2,"method":"textDocument/codeAction","params":{"textDocument":{"uri":"file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino"},"range":{"start":{"line":26,"character":5},"end":{"line":26,"character":5}},"context":{"diagnostics":[]}}}
+>>>
+Content-Length: 36
+
+{"id":2,"result":[],"jsonrpc":"2.0"}
+<<<
+Content-Length: 76
+
+{"jsonrpc":"2.0","method":"$/setTraceNotification","params":{"value":"off"}}Content-Length: 76
+
+{"jsonrpc":"2.0","method":"$/setTraceNotification","params":{"value":"off"}}Content-Length: 58
+
+{"jsonrpc":"2.0","id":3,"method":"shutdown","params":null}
+>>>
+Content-Length: 38
+
+{"id":3,"result":null,"jsonrpc":"2.0"}
+<<<
+Content-Length: 47
+
+{"jsonrpc":"2.0","method":"exit","params":null}

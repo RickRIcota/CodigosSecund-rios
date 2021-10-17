@@ -1,0 +1,1459 @@
+
+
+
+
+
+
+
+Started logging.
+2021/05/22 09:28:57 logging to c:\Users\ricar\Desktop\ApiPrograms\sonarrr\inols.log
+2021/05/22 09:28:57 Initial board configuration: {"ESP32 Pico Kit" esp32:esp32:pico32}
+2021/05/22 09:28:57 Language server build path: C:\Users\ricar\AppData\Local\Temp\arduino-language-server334813247
+2021/05/22 09:28:57 Language server build sketch root: C:\Users\ricar\AppData\Local\Temp\arduino-language-server334813247\sketch
+2021/05/22 09:28:57 [92mIDE --> LS     CL: REQUEST initialize 0: [0m
+2021/05/22 09:28:57 IDE --> initialize 0 [93m locked[0m
+2021/05/22 09:28:57 IDE --> initialize 0 [93m unlocked[0m
+2021/05/22 09:28:57 INIT--- initializing workbench
+2021/05/22 09:28:57 INIT--- [93m locked[0m
+2021/05/22 09:28:57     --> initialize(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr)
+2021/05/22 09:28:57 [91mIDE <-- LS     CL: ANSWER UNBOUND (0): [0m
+2021/05/22 09:28:57 running:  c:\Users\ricar\AppData\Local\Programs\Arduino IDE\resources\app\node_modules\arduino-ide-extension\build\arduino-cli.exe compile --fqbn esp32:esp32:pico32 --only-compilation-database --clean --source-override C:\Users\ricar\AppData\Local\Temp\501973138 --build-path C:\Users\ricar\AppData\Local\Temp\arduino-language-server334813247 --format json C:\Users\ricar\Desktop\ApiPrograms\sonarrr
+2021/05/22 09:28:57 [92mIDE --> LS     CL: NOTIFICATION initialized: [0m
+2021/05/22 09:29:02 arduino-cli output: {
+  "compiler_out": "",
+  "compiler_err": "",
+  "builder_result": {
+    "build_path": "C:\\Users\\ricar\\AppData\\Local\\Temp\\arduino-language-server334813247"
+  },
+  "success": true
+}
+
+2021/05/22 09:29:02 running:  c:\Users\ricar\AppData\Local\Programs\Arduino IDE\resources\app\node_modules\arduino-ide-extension\build\arduino-cli.exe config dump --format json
+2021/05/22 09:29:03 Arduino Data Dir ->  C:\Users\ricar\AppData\Local\Arduino15
+2021/05/22 09:29:03     Starting clangd: c:\Users\ricar\AppData\Local\Programs\Arduino IDE\resources\app\node_modules\arduino-ide-extension\build\bin\clangd.exe -log=verbose --compile-commands-dir=C:\Users\ricar\AppData\Local\Temp\arduino-language-server334813247 -query-driver=C:\Users\ricar\AppData\Local\Arduino15\packages\**
+2021/05/22 09:29:03 logging to c:\Users\ricar\Desktop\ApiPrograms\sonarrr\inols-clangd.log
+2021/05/22 09:29:03 logging to c:\Users\ricar\Desktop\ApiPrograms\sonarrr\inols-clangd-err.log
+2021/05/22 09:29:03 [91mIDE     LS --> CL: REQUEST initialize 0: [0m
+2021/05/22 09:29:03 [92mIDE     LS <-- CL: ANSWER initialize 0 (0): [0m
+2021/05/22 09:29:03 [91mIDE     LS --> CL: NOTIFICATION initialized: [0m
+2021/05/22 09:29:03 INIT--- initializing workbench (done)
+2021/05/22 09:29:03 INIT--- [93m unlocked[0m
+2021/05/22 09:29:03 IDE --> initialized notif1 [93m read-locked[0m
+2021/05/22 09:29:03 IDE --> initialized notif1 notification is not propagated to clangd
+2021/05/22 09:29:03 IDE --> initialized notif1 [93m read-unlocked[0m
+2021/05/22 09:29:03 [92mIDE --> LS     CL: NOTIFICATION textDocument/didOpen: [0m
+2021/05/22 09:29:03 IDE --> textDocument/didOpen notif2 [93m locked[0m
+2021/05/22 09:29:03 IDE --> textDocument/didOpen notif2 (file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino@1 as 'cpp')
+2021/05/22 09:29:04     increasing .ino tracked files count: 1
+2021/05/22 09:29:04 IDE --> textDocument/didOpen notif2 to clang: didOpen(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server334813247/sketch/sonarrr.ino.cpp@1 as 'cpp')
+2021/05/22 09:29:04 IDE --> textDocument/didOpen notif2 sent to Clang
+2021/05/22 09:29:04 [91mIDE     LS --> CL: NOTIFICATION textDocument/didOpen: [0m
+2021/05/22 09:29:04 IDE --> textDocument/didOpen notif2 Queued resfreshing document symbols
+2021/05/22 09:29:04 IDE --> textDocument/didOpen notif2 [93m unlocked[0m
+2021/05/22 09:29:04 SYLD--- [93m read-locked[0m
+2021/05/22 09:29:04 [92mIDE --> LS     CL: REQUEST textDocument/codeAction 1: [0m
+2021/05/22 09:29:04 SYLD--- requesting documentSymbol for file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server334813247/sketch/sonarrr.ino.cpp
+2021/05/22 09:29:04 SYLD--- [93m read-unlocked[0m
+2021/05/22 09:29:04 IDE --> textDocument/codeAction 1 [93m read-locked[0m
+2021/05/22 09:29:04 --> codeAction(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino:0:0)
+2021/05/22 09:29:04     --> codeAction(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server334813247/sketch/sonarrr.ino.cpp:2:0)
+2021/05/22 09:29:04 IDE --> textDocument/codeAction 1 sent to Clang
+2021/05/22 09:29:04 [92mIDE     LS <-- CL: REQUEST window/workDoneProgress/create 0: [0m
+2021/05/22 09:29:04 [91mIDE <-- LS     CL: REQUEST window/workDoneProgress/create 0: [0m
+2021/05/22 09:29:04 [91mIDE     LS --> CL: REQUEST textDocument/documentSymbol 1: [0m
+2021/05/22 09:29:04 [91mIDE     LS --> CL: REQUEST textDocument/codeAction 2: [0m
+2021/05/22 09:29:04 [91mIDE     LS --> CL: ANSWER UNBOUND (0): [0m
+2021/05/22 09:29:04 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress BEGIN indexing [0m
+2021/05/22 09:29:04 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 0/1 0%[0m
+2021/05/22 09:29:04 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 0/39 0%[0m
+2021/05/22 09:29:04 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 0/39 0%[0m
+2021/05/22 09:29:04 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 0/39 0%[0m
+2021/05/22 09:29:04 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 1/39 2.5641025641025643%[0m
+2021/05/22 09:29:04 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 1/39 2.5641025641025643%[0m
+2021/05/22 09:29:04 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 1/39 2.5641025641025643%[0m
+2021/05/22 09:29:06 [92mIDE     LS <-- CL: NOTIFICATION textDocument/publishDiagnostics: [0m
+2021/05/22 09:29:06 CLG <-- textDocument/publishDiagnostics notif9 (queued)
+2021/05/22 09:29:06 CLG <-- textDocument/publishDiagnostics notif9 [93m read-locked[0m
+2021/05/22 09:29:06 CLG <-- textDocument/publishDiagnostics notif9 (running)
+2021/05/22 09:29:06 CLG <-- textDocument/publishDiagnostics notif9 publishDiagnostics(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server334813247/sketch/sonarrr.ino.cpp):
+2021/05/22 09:29:06 CLG <-- textDocument/publishDiagnostics notif9 > 0:0 - 1: drv_unknown_argument
+2021/05/22 09:29:06 CLG <-- textDocument/publishDiagnostics notif9 > 0:0 - 1: drv_unknown_argument_with_suggestion
+2021/05/22 09:29:06 CLG <-- textDocument/publishDiagnostics notif9 > 0:9 - 1: unknown_typename
+2021/05/22 09:29:06 CLG <-- textDocument/publishDiagnostics notif9 > 0:0 - 1: fatal_too_many_errors
+2021/05/22 09:29:06 [92mIDE     LS <-- CL: ANSWER textDocument/documentSymbol 1 (1): [0m
+2021/05/22 09:29:06 SYLD--- [93m read-locked[0m
+2021/05/22 09:29:06 SYLD---    symbol: Function setup 15:0-15:12
+2021/05/22 09:29:06 SYLD---             > void setup()
+2021/05/22 09:29:06 SYLD---    symbol: Function loop 17:0-17:11
+2021/05/22 09:29:06 SYLD---             > void loop()
+2021/05/22 09:29:06 SYLD---    symbol: Function sonar1 19:0-19:13
+2021/05/22 09:29:06 SYLD---             > bool sonar1()
+2021/05/22 09:29:06 SYLD---    symbol: Function sonar2 21:0-21:13
+2021/05/22 09:29:06 SYLD---             > bool sonar2()
+2021/05/22 09:29:06 SYLD---    symbol: Function setup 23:0-31:1
+2021/05/22 09:29:06 SYLD---      TRIMMED> void setup()
+2021/05/22 09:29:06 SYLD---    symbol: Function loop 33:0-80:1
+2021/05/22 09:29:06 SYLD---      TRIMMED> void loop()
+2021/05/22 09:29:06 SYLD---    symbol: Function sonar1 83:0-116:1
+2021/05/22 09:29:06 SYLD---      TRIMMED> bool sonar1()
+2021/05/22 09:29:06 SYLD---    symbol: Function sonar2 118:0-149:1
+2021/05/22 09:29:06 SYLD---      TRIMMED> bool sonar2()
+2021/05/22 09:29:06 SYLD--- [93m read-unlocked[0m
+2021/05/22 09:29:06 SYLD--- (done)
+2021/05/22 09:29:06     URI: converted 0:0-0:0 to /not-ino:0:0-0:0
+2021/05/22 09:29:06     URI: converted 0:0-0:0 to /not-ino:0:0-0:0
+2021/05/22 09:29:06     URI: converted 0:9-0:10 to /not-ino:0:9-0:10
+2021/05/22 09:29:06     URI: converted 0:0-0:0 to /not-ino:0:0-0:0
+2021/05/22 09:29:06 CLG <-- textDocument/publishDiagnostics notif9 [93m read-unlocked[0m
+2021/05/22 09:29:06 [92mIDE     LS <-- CL: ANSWER textDocument/codeAction 2 (2): [0m
+2021/05/22 09:29:06     <-- codeAction(0 elements)
+2021/05/22 09:29:06 <-- codeAction(0 elements)
+2021/05/22 09:29:06 IDE --> textDocument/codeAction 1 [93m read-unlocked[0m
+2021/05/22 09:29:06 [91mIDE <-- LS     CL: ANSWER UNBOUND (1): [0m
+2021/05/22 09:29:06 [92mIDE --> LS     CL: REQUEST textDocument/hover 2: [0m
+2021/05/22 09:29:06 IDE --> textDocument/hover 2 [93m read-locked[0m
+2021/05/22 09:29:06 --> hover(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino:9:13)
+2021/05/22 09:29:06     --> hover(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server334813247/sketch/sonarrr.ino.cpp:11:13)
+2021/05/22 09:29:06 IDE --> textDocument/hover 2 sent to Clang
+2021/05/22 09:29:06 [91mIDE     LS --> CL: REQUEST textDocument/hover 3: [0m
+2021/05/22 09:29:06 [92mIDE     LS <-- CL: ANSWER textDocument/hover 3 (3): [0m
+2021/05/22 09:29:06 IDE --> textDocument/hover 2 [93m read-unlocked[0m
+2021/05/22 09:29:06 [91mIDE <-- LS     CL: ANSWER UNBOUND (2): [0m
+2021/05/22 09:29:06 [92mIDE --> LS     CL: NOTIFICATION $/cancelRequest: [0m
+2021/05/22 09:29:06 IDE --> $/cancelRequest notif3 [93m read-locked[0m
+2021/05/22 09:29:06 IDE --> $/cancelRequest notif3 sent to Clang
+2021/05/22 09:29:06 [91mIDE     LS --> CL: NOTIFICATION $/cancelRequest: [0m
+2021/05/22 09:29:06 IDE --> $/cancelRequest notif3 [93m read-unlocked[0m
+2021/05/22 09:29:06 [92mIDE --> LS     CL: ANSWER window/workDoneProgress/create 0 (0): [0m
+2021/05/22 09:29:06 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress BEGIN indexing [0m
+2021/05/22 09:29:06 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 1/39 2.5641025641025643%[0m
+2021/05/22 09:29:08 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 2/39 5.128205128205129%[0m
+2021/05/22 09:29:08 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 2/39 5.128205128205129%[0m
+2021/05/22 09:29:08 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 2/39 5.128205128205129%[0m
+2021/05/22 09:29:08 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 2/39 5.128205128205129%[0m
+2021/05/22 09:29:08 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 3/39 7.6923076923076925%[0m
+2021/05/22 09:29:08 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 3/39 7.6923076923076925%[0m
+2021/05/22 09:29:08 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 3/39 7.6923076923076925%[0m
+2021/05/22 09:29:08 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 3/39 7.6923076923076925%[0m
+2021/05/22 09:29:08 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 4/39 10.256410256410257%[0m
+2021/05/22 09:29:08 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 4/39 10.256410256410257%[0m
+2021/05/22 09:29:08 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 4/39 10.256410256410257%[0m
+2021/05/22 09:29:08 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 4/39 10.256410256410257%[0m
+2021/05/22 09:29:09 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 5/39 12.820512820512821%[0m
+2021/05/22 09:29:09 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 5/39 12.820512820512821%[0m
+2021/05/22 09:29:09 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 5/39 12.820512820512821%[0m
+2021/05/22 09:29:09 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 5/39 12.820512820512821%[0m
+2021/05/22 09:29:09 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 6/39 15.384615384615385%[0m
+2021/05/22 09:29:09 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 6/39 15.384615384615385%[0m
+2021/05/22 09:29:09 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 6/39 15.384615384615385%[0m
+2021/05/22 09:29:09 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 6/39 15.384615384615385%[0m
+2021/05/22 09:29:10 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 7/39 17.94871794871795%[0m
+2021/05/22 09:29:10 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 7/39 17.94871794871795%[0m
+2021/05/22 09:29:10 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 7/39 17.94871794871795%[0m
+2021/05/22 09:29:10 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 7/39 17.94871794871795%[0m
+2021/05/22 09:29:11 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 8/39 20.512820512820515%[0m
+2021/05/22 09:29:11 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 8/39 20.512820512820515%[0m
+2021/05/22 09:29:11 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 8/39 20.512820512820515%[0m
+2021/05/22 09:29:11 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 8/39 20.512820512820515%[0m
+2021/05/22 09:29:13 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 9/39 23.076923076923077%[0m
+2021/05/22 09:29:13 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 9/39 23.076923076923077%[0m
+2021/05/22 09:29:13 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 9/39 23.076923076923077%[0m
+2021/05/22 09:29:14 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 10/39 25.641025641025642%[0m
+2021/05/22 09:29:14 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 10/39 25.641025641025642%[0m
+2021/05/22 09:29:14 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 10/39 25.641025641025642%[0m
+2021/05/22 09:29:14 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 10/39 25.641025641025642%[0m
+2021/05/22 09:29:15 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 11/39 28.205128205128204%[0m
+2021/05/22 09:29:15 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 11/39 28.205128205128204%[0m
+2021/05/22 09:29:15 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 11/39 28.205128205128204%[0m
+2021/05/22 09:29:15 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 11/39 28.205128205128204%[0m
+2021/05/22 09:29:15 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 12/39 30.76923076923077%[0m
+2021/05/22 09:29:15 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 12/39 30.76923076923077%[0m
+2021/05/22 09:29:15 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 12/39 30.76923076923077%[0m
+2021/05/22 09:29:15 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 12/39 30.76923076923077%[0m
+2021/05/22 09:29:15 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 13/39 33.333333333333336%[0m
+2021/05/22 09:29:15 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 13/39 33.333333333333336%[0m
+2021/05/22 09:29:15 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 13/39 33.333333333333336%[0m
+2021/05/22 09:29:16 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 13/39 33.333333333333336%[0m
+2021/05/22 09:29:16 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 14/39 35.8974358974359%[0m
+2021/05/22 09:29:16 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 14/39 35.8974358974359%[0m
+2021/05/22 09:29:16 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 14/39 35.8974358974359%[0m
+2021/05/22 09:29:16 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 14/39 35.8974358974359%[0m
+2021/05/22 09:29:16 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 15/39 38.46153846153846%[0m
+2021/05/22 09:29:16 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 15/39 38.46153846153846%[0m
+2021/05/22 09:29:16 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 15/39 38.46153846153846%[0m
+2021/05/22 09:29:16 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 15/39 38.46153846153846%[0m
+2021/05/22 09:29:17 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 16/39 41.02564102564103%[0m
+2021/05/22 09:29:17 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 16/39 41.02564102564103%[0m
+2021/05/22 09:29:17 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 16/39 41.02564102564103%[0m
+2021/05/22 09:29:17 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 16/39 41.02564102564103%[0m
+2021/05/22 09:29:17 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 17/39 43.58974358974359%[0m
+2021/05/22 09:29:17 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 17/39 43.58974358974359%[0m
+2021/05/22 09:29:17 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 17/39 43.58974358974359%[0m
+2021/05/22 09:29:17 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 18/39 46.15384615384615%[0m
+2021/05/22 09:29:17 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 18/39 46.15384615384615%[0m
+2021/05/22 09:29:17 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 18/39 46.15384615384615%[0m
+2021/05/22 09:29:17 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 18/39 46.15384615384615%[0m
+2021/05/22 09:29:17 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 19/39 48.717948717948715%[0m
+2021/05/22 09:29:17 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 19/39 48.717948717948715%[0m
+2021/05/22 09:29:17 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 19/39 48.717948717948715%[0m
+2021/05/22 09:29:17 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 19/39 48.717948717948715%[0m
+2021/05/22 09:29:17 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 20/39 51.282051282051285%[0m
+2021/05/22 09:29:17 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 20/39 51.282051282051285%[0m
+2021/05/22 09:29:17 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 20/39 51.282051282051285%[0m
+2021/05/22 09:29:17 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 21/39 53.84615384615385%[0m
+2021/05/22 09:29:17 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 21/39 53.84615384615385%[0m
+2021/05/22 09:29:17 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 21/39 53.84615384615385%[0m
+2021/05/22 09:29:18 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 22/39 56.41025641025641%[0m
+2021/05/22 09:29:18 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 22/39 56.41025641025641%[0m
+2021/05/22 09:29:18 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 22/39 56.41025641025641%[0m
+2021/05/22 09:29:18 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 22/39 56.41025641025641%[0m
+2021/05/22 09:29:18 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 23/39 58.97435897435897%[0m
+2021/05/22 09:29:18 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 23/39 58.97435897435897%[0m
+2021/05/22 09:29:18 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 23/39 58.97435897435897%[0m
+2021/05/22 09:29:18 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 24/39 61.53846153846154%[0m
+2021/05/22 09:29:18 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 24/39 61.53846153846154%[0m
+2021/05/22 09:29:18 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 24/39 61.53846153846154%[0m
+2021/05/22 09:29:18 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 24/39 61.53846153846154%[0m
+2021/05/22 09:29:19 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 25/39 64.1025641025641%[0m
+2021/05/22 09:29:19 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 25/39 64.1025641025641%[0m
+2021/05/22 09:29:19 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 25/39 64.1025641025641%[0m
+2021/05/22 09:29:19 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 25/39 64.1025641025641%[0m
+2021/05/22 09:29:20 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 26/39 66.66666666666667%[0m
+2021/05/22 09:29:20 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 26/39 66.66666666666667%[0m
+2021/05/22 09:29:20 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 26/39 66.66666666666667%[0m
+2021/05/22 09:29:20 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 26/39 66.66666666666667%[0m
+2021/05/22 09:29:20 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 27/39 69.23076923076923%[0m
+2021/05/22 09:29:20 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 27/39 69.23076923076923%[0m
+2021/05/22 09:29:20 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 27/39 69.23076923076923%[0m
+2021/05/22 09:29:20 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 27/39 69.23076923076923%[0m
+2021/05/22 09:29:20 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 28/39 71.7948717948718%[0m
+2021/05/22 09:29:20 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 28/39 71.7948717948718%[0m
+2021/05/22 09:29:20 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 28/39 71.7948717948718%[0m
+2021/05/22 09:29:20 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 28/39 71.7948717948718%[0m
+2021/05/22 09:29:20 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 29/39 74.35897435897436%[0m
+2021/05/22 09:29:20 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 29/39 74.35897435897436%[0m
+2021/05/22 09:29:20 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 29/39 74.35897435897436%[0m
+2021/05/22 09:29:20 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 30/39 76.92307692307692%[0m
+2021/05/22 09:29:20 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 30/39 76.92307692307692%[0m
+2021/05/22 09:29:20 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 30/39 76.92307692307692%[0m
+2021/05/22 09:29:21 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 31/39 79.48717948717949%[0m
+2021/05/22 09:29:21 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 31/39 79.48717948717949%[0m
+2021/05/22 09:29:21 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 31/39 79.48717948717949%[0m
+2021/05/22 09:29:21 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 31/39 79.48717948717949%[0m
+2021/05/22 09:29:21 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 32/39 82.05128205128206%[0m
+2021/05/22 09:29:21 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 32/39 82.05128205128206%[0m
+2021/05/22 09:29:21 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 32/39 82.05128205128206%[0m
+2021/05/22 09:29:21 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 33/39 84.61538461538461%[0m
+2021/05/22 09:29:21 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 33/39 84.61538461538461%[0m
+2021/05/22 09:29:21 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 33/39 84.61538461538461%[0m
+2021/05/22 09:29:21 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 33/39 84.61538461538461%[0m
+2021/05/22 09:29:21 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 34/39 87.17948717948718%[0m
+2021/05/22 09:29:21 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 34/39 87.17948717948718%[0m
+2021/05/22 09:29:21 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 34/39 87.17948717948718%[0m
+2021/05/22 09:29:22 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 35/39 89.74358974358974%[0m
+2021/05/22 09:29:22 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 35/39 89.74358974358974%[0m
+2021/05/22 09:29:22 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 35/39 89.74358974358974%[0m
+2021/05/22 09:29:22 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 35/39 89.74358974358974%[0m
+2021/05/22 09:29:22 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 36/39 92.3076923076923%[0m
+2021/05/22 09:29:22 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 36/39 92.3076923076923%[0m
+2021/05/22 09:29:22 [92mIDE --> LS     CL: REQUEST textDocument/codeAction 3: [0m
+2021/05/22 09:29:22 IDE --> textDocument/codeAction 3 [93m read-locked[0m
+2021/05/22 09:29:22 --> codeAction(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino:6:1)
+2021/05/22 09:29:22     --> codeAction(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server334813247/sketch/sonarrr.ino.cpp:8:1)
+2021/05/22 09:29:22 IDE --> textDocument/codeAction 3 sent to Clang
+2021/05/22 09:29:22 [91mIDE     LS --> CL: REQUEST textDocument/codeAction 4: [0m
+2021/05/22 09:29:22 [92mIDE     LS <-- CL: ANSWER textDocument/codeAction 4 (4): [0m
+2021/05/22 09:29:22     <-- codeAction(0 elements)
+2021/05/22 09:29:22 <-- codeAction(0 elements)
+2021/05/22 09:29:22 IDE --> textDocument/codeAction 3 [93m read-unlocked[0m
+2021/05/22 09:29:22 [91mIDE <-- LS     CL: ANSWER UNBOUND (3): [0m
+2021/05/22 09:29:22 [92mIDE --> LS     CL: REQUEST textDocument/codeAction 4: [0m
+2021/05/22 09:29:22 IDE --> textDocument/codeAction 4 [93m read-locked[0m
+2021/05/22 09:29:22 --> codeAction(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino:6:0)
+2021/05/22 09:29:22     --> codeAction(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server334813247/sketch/sonarrr.ino.cpp:8:0)
+2021/05/22 09:29:22 IDE --> textDocument/codeAction 4 sent to Clang
+2021/05/22 09:29:22 [91mIDE     LS --> CL: REQUEST textDocument/codeAction 5: [0m
+2021/05/22 09:29:22 [92mIDE     LS <-- CL: ANSWER textDocument/codeAction 5 (5): [0m
+2021/05/22 09:29:22     <-- codeAction(0 elements)
+2021/05/22 09:29:22 <-- codeAction(0 elements)
+2021/05/22 09:29:22 IDE --> textDocument/codeAction 4 [93m read-unlocked[0m
+2021/05/22 09:29:22 [91mIDE <-- LS     CL: ANSWER UNBOUND (4): [0m
+2021/05/22 09:29:22 [92mIDE --> LS     CL: REQUEST textDocument/definition 5: [0m
+2021/05/22 09:29:22 IDE --> textDocument/definition 5 [93m read-locked[0m
+2021/05/22 09:29:22 --> textDocument/definition(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino:6:0)
+2021/05/22 09:29:22     --> textDocument/definition(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server334813247/sketch/sonarrr.ino.cpp:8:0)
+2021/05/22 09:29:22 IDE --> textDocument/definition 5 sent to Clang
+2021/05/22 09:29:22 [91mIDE     LS --> CL: REQUEST textDocument/definition 6: [0m
+2021/05/22 09:29:22 [92mIDE     LS <-- CL: ANSWER textDocument/definition 6 (6): [0m
+2021/05/22 09:29:22 IDE --> textDocument/definition 5 [93m read-unlocked[0m
+2021/05/22 09:29:22 [91mIDE <-- LS     CL: ANSWER UNBOUND (5): [0m
+2021/05/22 09:29:22 [92mIDE --> LS     CL: REQUEST textDocument/hover 6: [0m
+2021/05/22 09:29:22 IDE --> textDocument/hover 6 [93m read-locked[0m
+2021/05/22 09:29:22 --> hover(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino:6:0)
+2021/05/22 09:29:22     --> hover(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server334813247/sketch/sonarrr.ino.cpp:8:0)
+2021/05/22 09:29:22 IDE --> textDocument/hover 6 sent to Clang
+2021/05/22 09:29:22 [91mIDE     LS --> CL: REQUEST textDocument/hover 7: [0m
+2021/05/22 09:29:22 [92mIDE     LS <-- CL: ANSWER textDocument/hover 7 (7): [0m
+2021/05/22 09:29:22 IDE --> textDocument/hover 6 [93m read-unlocked[0m
+2021/05/22 09:29:22 [91mIDE <-- LS     CL: ANSWER UNBOUND (6): [0m
+2021/05/22 09:29:23 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 37/39 94.87179487179488%[0m
+2021/05/22 09:29:23 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 37/39 94.87179487179488%[0m
+2021/05/22 09:29:23 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 38/39 97.43589743589743%[0m
+2021/05/22 09:29:23 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 38/39 97.43589743589743%[0m
+2021/05/22 09:29:24 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress END [0m
+2021/05/22 09:29:24 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress END [0m
+2021/05/22 09:29:56 [92mIDE --> LS     CL: REQUEST textDocument/hover 7: [0m
+2021/05/22 09:29:56 IDE --> textDocument/hover 7 [93m read-locked[0m
+2021/05/22 09:29:56 --> hover(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino:25:3)
+2021/05/22 09:29:56     --> hover(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server334813247/sketch/sonarrr.ino.cpp:36:3)
+2021/05/22 09:29:56 IDE --> textDocument/hover 7 sent to Clang
+2021/05/22 09:29:56 [91mIDE     LS --> CL: REQUEST textDocument/hover 8: [0m
+2021/05/22 09:29:56 [92mIDE     LS <-- CL: ANSWER textDocument/hover 8 (8): [0m
+2021/05/22 09:29:56 IDE --> textDocument/hover 7 [93m read-unlocked[0m
+2021/05/22 09:29:56 [91mIDE <-- LS     CL: ANSWER UNBOUND (7): [0m
+2021/05/22 09:29:58 [92mIDE --> LS     CL: REQUEST textDocument/hover 8: [0m
+2021/05/22 09:29:58 IDE --> textDocument/hover 8 [93m read-locked[0m
+2021/05/22 09:29:58 --> hover(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino:52:18)
+2021/05/22 09:29:58     --> hover(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server334813247/sketch/sonarrr.ino.cpp:63:18)
+2021/05/22 09:29:58 IDE --> textDocument/hover 8 sent to Clang
+2021/05/22 09:29:58 [91mIDE     LS --> CL: REQUEST textDocument/hover 9: [0m
+2021/05/22 09:29:58 [92mIDE     LS <-- CL: ANSWER textDocument/hover 9 (9): [0m
+2021/05/22 09:29:58 <-- hover("### function `delay`  \n\n---\n→ `void`  \nParameters:  \n- `uint32_t`\n\n---\n```cpp\nvoid delay(uint32_t)\n```")
+2021/05/22 09:29:58 IDE --> textDocument/hover 8 [93m read-unlocked[0m
+2021/05/22 09:29:58 [91mIDE <-- LS     CL: ANSWER UNBOUND (8): [0m
+2021/05/22 09:30:06 [92mIDE --> LS     CL: REQUEST textDocument/codeAction 9: [0m
+2021/05/22 09:30:06 IDE --> textDocument/codeAction 9 [93m read-locked[0m
+2021/05/22 09:30:06 --> codeAction(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino:24:4)
+2021/05/22 09:30:06     --> codeAction(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server334813247/sketch/sonarrr.ino.cpp:35:4)
+2021/05/22 09:30:06 IDE --> textDocument/codeAction 9 sent to Clang
+2021/05/22 09:30:06 [91mIDE     LS --> CL: REQUEST textDocument/codeAction 10: [0m
+2021/05/22 09:30:06 [92mIDE     LS <-- CL: ANSWER textDocument/codeAction 10 (10): [0m
+2021/05/22 09:30:06     <-- codeAction(1 elements)
+2021/05/22 09:30:06         > CodeAction: Extract to function
+2021/05/22 09:30:06 <-- codeAction(1 elements)
+2021/05/22 09:30:06 IDE --> textDocument/codeAction 9 [93m read-unlocked[0m
+2021/05/22 09:30:06 [91mIDE <-- LS     CL: ANSWER UNBOUND (9): [0m
+2021/05/22 09:30:06 [92mIDE --> LS     CL: REQUEST textDocument/hover 10: [0m
+2021/05/22 09:30:06 IDE --> textDocument/hover 10 [93m read-locked[0m
+2021/05/22 09:30:06 --> hover(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino:24:3)
+2021/05/22 09:30:06     --> hover(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server334813247/sketch/sonarrr.ino.cpp:35:3)
+2021/05/22 09:30:06 IDE --> textDocument/hover 10 sent to Clang
+2021/05/22 09:30:06 [91mIDE     LS --> CL: REQUEST textDocument/hover 11: [0m
+2021/05/22 09:30:06 [92mIDE     LS <-- CL: ANSWER textDocument/hover 11 (11): [0m
+2021/05/22 09:30:06 IDE --> textDocument/hover 10 [93m read-unlocked[0m
+2021/05/22 09:30:06 [91mIDE <-- LS     CL: ANSWER UNBOUND (10): [0m
+2021/05/22 09:30:07 [92mIDE --> LS     CL: REQUEST textDocument/hover 11: [0m
+2021/05/22 09:30:07 IDE --> textDocument/hover 11 [93m read-locked[0m
+2021/05/22 09:30:07 --> hover(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino:30:15)
+2021/05/22 09:30:07     --> hover(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server334813247/sketch/sonarrr.ino.cpp:41:15)
+2021/05/22 09:30:07 IDE --> textDocument/hover 11 sent to Clang
+2021/05/22 09:30:07 [91mIDE     LS --> CL: REQUEST textDocument/hover 12: [0m
+2021/05/22 09:30:07 [92mIDE     LS <-- CL: ANSWER textDocument/hover 12 (12): [0m
+2021/05/22 09:30:07 <-- hover("### variable `numero`  \n\n---\nType: `int`  \nValue = `0`  \n\n---\n```cpp\nint numero = 0\n```")
+2021/05/22 09:30:07 IDE --> textDocument/hover 11 [93m read-unlocked[0m
+2021/05/22 09:30:07 [91mIDE <-- LS     CL: ANSWER UNBOUND (11): [0m
+2021/05/22 09:31:29 [92mIDE --> LS     CL: REQUEST textDocument/codeAction 12: [0m
+2021/05/22 09:31:29 IDE --> textDocument/codeAction 12 [93m read-locked[0m
+2021/05/22 09:31:29 --> codeAction(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino:28:23)
+2021/05/22 09:31:29     --> codeAction(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server334813247/sketch/sonarrr.ino.cpp:39:23)
+2021/05/22 09:31:29 IDE --> textDocument/codeAction 12 sent to Clang
+2021/05/22 09:31:29 [91mIDE     LS --> CL: REQUEST textDocument/codeAction 13: [0m
+2021/05/22 09:31:29 [92mIDE     LS <-- CL: ANSWER textDocument/codeAction 13 (13): [0m
+2021/05/22 09:31:29     <-- codeAction(0 elements)
+2021/05/22 09:31:29 <-- codeAction(0 elements)
+2021/05/22 09:31:29 IDE --> textDocument/codeAction 12 [93m read-unlocked[0m
+2021/05/22 09:31:29 [91mIDE <-- LS     CL: ANSWER UNBOUND (12): [0m
+2021/05/22 09:31:33 [92mIDE --> LS     CL: REQUEST textDocument/hover 13: [0m
+2021/05/22 09:31:33 IDE --> textDocument/hover 13 [93m read-locked[0m
+2021/05/22 09:31:33 --> hover(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino:24:3)
+2021/05/22 09:31:33     --> hover(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server334813247/sketch/sonarrr.ino.cpp:35:3)
+2021/05/22 09:31:33 IDE --> textDocument/hover 13 sent to Clang
+2021/05/22 09:31:33 [91mIDE     LS --> CL: REQUEST textDocument/hover 14: [0m
+2021/05/22 09:31:33 [92mIDE     LS <-- CL: ANSWER textDocument/hover 14 (14): [0m
+2021/05/22 09:31:33 IDE --> textDocument/hover 13 [93m read-unlocked[0m
+2021/05/22 09:31:33 [91mIDE <-- LS     CL: ANSWER UNBOUND (13): [0m
+2021/05/22 09:31:34 [92mIDE --> LS     CL: REQUEST textDocument/codeAction 14: [0m
+2021/05/22 09:31:34 IDE --> textDocument/codeAction 14 [93m read-locked[0m
+2021/05/22 09:31:34 --> codeAction(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino:29:9)
+2021/05/22 09:31:34     --> codeAction(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server334813247/sketch/sonarrr.ino.cpp:40:9)
+2021/05/22 09:31:34 IDE --> textDocument/codeAction 14 sent to Clang
+2021/05/22 09:31:34 [91mIDE     LS --> CL: REQUEST textDocument/codeAction 15: [0m
+2021/05/22 09:31:34 [92mIDE     LS <-- CL: ANSWER textDocument/codeAction 15 (15): [0m
+2021/05/22 09:31:34     <-- codeAction(0 elements)
+2021/05/22 09:31:34 <-- codeAction(0 elements)
+2021/05/22 09:31:34 IDE --> textDocument/codeAction 14 [93m read-unlocked[0m
+2021/05/22 09:31:34 [91mIDE <-- LS     CL: ANSWER UNBOUND (14): [0m
+2021/05/22 09:31:38 [92mIDE --> LS     CL: REQUEST textDocument/codeAction 15: [0m
+2021/05/22 09:31:38 IDE --> textDocument/codeAction 15 [93m read-locked[0m
+2021/05/22 09:31:38 --> codeAction(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino:22:0)
+2021/05/22 09:31:38     --> codeAction(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server334813247/sketch/sonarrr.ino.cpp:33:0)
+2021/05/22 09:31:38 IDE --> textDocument/codeAction 15 sent to Clang
+2021/05/22 09:31:38 [91mIDE     LS --> CL: REQUEST textDocument/codeAction 16: [0m
+2021/05/22 09:31:38 [92mIDE     LS <-- CL: ANSWER textDocument/codeAction 16 (16): [0m
+2021/05/22 09:31:38     <-- codeAction(0 elements)
+2021/05/22 09:31:38 <-- codeAction(0 elements)
+2021/05/22 09:31:38 IDE --> textDocument/codeAction 15 [93m read-unlocked[0m
+2021/05/22 09:31:38 [91mIDE <-- LS     CL: ANSWER UNBOUND (15): [0m
+2021/05/22 09:37:40 [92mIDE --> LS     CL: REQUEST shutdown 16: [0m
+2021/05/22 09:37:40 IDE --> shutdown 16 [93m read-locked[0m
+2021/05/22 09:37:40 IDE --> shutdown 16 sent to Clang
+2021/05/22 09:37:40 [91mIDE     LS --> CL: REQUEST shutdown 17: [0m
+2021/05/22 09:37:40 [92mIDE     LS <-- CL: ANSWER shutdown 17 (17): [0m
+2021/05/22 09:37:40 IDE --> shutdown 16 [93m read-unlocked[0m
+2021/05/22 09:37:40 [91mIDE <-- LS     CL: ANSWER UNBOUND (16): [0m
+2021/05/22 09:37:40 [92mIDE --> LS     CL: NOTIFICATION exit: [0m
+2021/05/22 09:37:40 IDE --> exit notif4 [93m read-locked[0m
+2021/05/22 09:37:40 IDE --> exit notif4 sent to Clang
+2021/05/22 09:37:40 [91mIDE     LS --> CL: NOTIFICATION exit: [0m
+2021/05/22 09:37:40 IDE --> exit notif4 [93m read-unlocked[0m
+2021/05/22 09:37:41 Lost connection with clangd!
+2021/05/22 09:37:41 removing buildpath
+
+
+
+
+
+
+
+Started logging.
+2021/05/22 09:42:46 logging to c:\Users\ricar\Desktop\ApiPrograms\sonarrr\inols.log
+2021/05/22 09:42:46 Initial board configuration: {"ESP32 Pico Kit" esp32:esp32:pico32}
+2021/05/22 09:42:46 Language server build path: C:\Users\ricar\AppData\Local\Temp\arduino-language-server110526227
+2021/05/22 09:42:46 Language server build sketch root: C:\Users\ricar\AppData\Local\Temp\arduino-language-server110526227\sketch
+2021/05/22 09:42:46 [92mIDE --> LS     CL: REQUEST initialize 0: [0m
+2021/05/22 09:42:46 IDE --> initialize 0 [93m locked[0m
+2021/05/22 09:42:46 IDE --> initialize 0 [93m unlocked[0m
+2021/05/22 09:42:46 INIT--- initializing workbench
+2021/05/22 09:42:46 INIT--- [93m locked[0m
+2021/05/22 09:42:46     --> initialize(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr)
+2021/05/22 09:42:46 [91mIDE <-- LS     CL: ANSWER UNBOUND (0): [0m
+2021/05/22 09:42:46 running:  c:\Users\ricar\AppData\Local\Programs\Arduino IDE\resources\app\node_modules\arduino-ide-extension\build\arduino-cli.exe compile --fqbn esp32:esp32:pico32 --only-compilation-database --clean --source-override C:\Users\ricar\AppData\Local\Temp\800812374 --build-path C:\Users\ricar\AppData\Local\Temp\arduino-language-server110526227 --format json C:\Users\ricar\Desktop\ApiPrograms\sonarrr
+2021/05/22 09:42:46 [92mIDE --> LS     CL: NOTIFICATION initialized: [0m
+2021/05/22 09:42:50 arduino-cli output: {
+  "compiler_out": "",
+  "compiler_err": "",
+  "builder_result": {
+    "build_path": "C:\\Users\\ricar\\AppData\\Local\\Temp\\arduino-language-server110526227"
+  },
+  "success": true
+}
+
+2021/05/22 09:42:50 running:  c:\Users\ricar\AppData\Local\Programs\Arduino IDE\resources\app\node_modules\arduino-ide-extension\build\arduino-cli.exe config dump --format json
+2021/05/22 09:42:50 Arduino Data Dir ->  C:\Users\ricar\AppData\Local\Arduino15
+2021/05/22 09:42:50     Starting clangd: c:\Users\ricar\AppData\Local\Programs\Arduino IDE\resources\app\node_modules\arduino-ide-extension\build\bin\clangd.exe -log=verbose --compile-commands-dir=C:\Users\ricar\AppData\Local\Temp\arduino-language-server110526227 -query-driver=C:\Users\ricar\AppData\Local\Arduino15\packages\**
+2021/05/22 09:42:50 logging to c:\Users\ricar\Desktop\ApiPrograms\sonarrr\inols-clangd.log
+2021/05/22 09:42:50 logging to c:\Users\ricar\Desktop\ApiPrograms\sonarrr\inols-clangd-err.log
+2021/05/22 09:42:50 [91mIDE     LS --> CL: REQUEST initialize 0: [0m
+2021/05/22 09:42:50 [92mIDE     LS <-- CL: ANSWER initialize 0 (0): [0m
+2021/05/22 09:42:50 [91mIDE     LS --> CL: NOTIFICATION initialized: [0m
+2021/05/22 09:42:50 INIT--- initializing workbench (done)
+2021/05/22 09:42:50 INIT--- [93m unlocked[0m
+2021/05/22 09:42:50 IDE --> initialized notif1 [93m read-locked[0m
+2021/05/22 09:42:50 IDE --> initialized notif1 notification is not propagated to clangd
+2021/05/22 09:42:50 IDE --> initialized notif1 [93m read-unlocked[0m
+2021/05/22 09:42:50 [92mIDE --> LS     CL: NOTIFICATION textDocument/didOpen: [0m
+2021/05/22 09:42:50 IDE --> textDocument/didOpen notif2 [93m locked[0m
+2021/05/22 09:42:50 IDE --> textDocument/didOpen notif2 (file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino@1 as 'cpp')
+2021/05/22 09:42:50     increasing .ino tracked files count: 1
+2021/05/22 09:42:50 IDE --> textDocument/didOpen notif2 to clang: didOpen(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server110526227/sketch/sonarrr.ino.cpp@1 as 'cpp')
+2021/05/22 09:42:50 IDE --> textDocument/didOpen notif2 sent to Clang
+2021/05/22 09:42:50 [91mIDE     LS --> CL: NOTIFICATION textDocument/didOpen: [0m
+2021/05/22 09:42:50 IDE --> textDocument/didOpen notif2 Queued resfreshing document symbols
+2021/05/22 09:42:50 IDE --> textDocument/didOpen notif2 [93m unlocked[0m
+2021/05/22 09:42:50 [92mIDE --> LS     CL: REQUEST textDocument/codeAction 1: [0m
+2021/05/22 09:42:50 IDE --> textDocument/codeAction 1 [93m read-locked[0m
+2021/05/22 09:42:50 --> codeAction(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino:22:0)
+2021/05/22 09:42:50 SYLD--- [93m read-locked[0m
+2021/05/22 09:42:50 SYLD--- requesting documentSymbol for file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server110526227/sketch/sonarrr.ino.cpp
+2021/05/22 09:42:50 SYLD--- [93m read-unlocked[0m
+2021/05/22 09:42:50 [91mIDE     LS --> CL: REQUEST textDocument/documentSymbol 1: [0m
+2021/05/22 09:42:50     --> codeAction(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server110526227/sketch/sonarrr.ino.cpp:33:0)
+2021/05/22 09:42:50 IDE --> textDocument/codeAction 1 sent to Clang
+2021/05/22 09:42:50 [91mIDE     LS --> CL: REQUEST textDocument/codeAction 2: [0m
+2021/05/22 09:42:50 [92mIDE     LS <-- CL: REQUEST window/workDoneProgress/create 0: [0m
+2021/05/22 09:42:50 [91mIDE     LS --> CL: ANSWER UNBOUND (0): [0m
+2021/05/22 09:42:50 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress BEGIN indexing [0m
+2021/05/22 09:42:50 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 0/1 0%[0m
+2021/05/22 09:42:50 [91mIDE <-- LS     CL: REQUEST window/workDoneProgress/create 0: [0m
+2021/05/22 09:42:50 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 0/39 0%[0m
+2021/05/22 09:42:50 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 1/39 2.5641025641025643%[0m
+2021/05/22 09:42:50 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 1/39 2.5641025641025643%[0m
+2021/05/22 09:42:50 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 1/39 2.5641025641025643%[0m
+2021/05/22 09:42:50 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 1/39 2.5641025641025643%[0m
+2021/05/22 09:42:50 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 1/39 2.5641025641025643%[0m
+2021/05/22 09:42:53 [92mIDE     LS <-- CL: NOTIFICATION textDocument/publishDiagnostics: [0m
+2021/05/22 09:42:53 CLG <-- textDocument/publishDiagnostics notif9 (queued)
+2021/05/22 09:42:53 CLG <-- textDocument/publishDiagnostics notif9 [93m read-locked[0m
+2021/05/22 09:42:53 CLG <-- textDocument/publishDiagnostics notif9 (running)
+2021/05/22 09:42:53 CLG <-- textDocument/publishDiagnostics notif9 publishDiagnostics(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server110526227/sketch/sonarrr.ino.cpp):
+2021/05/22 09:42:53 CLG <-- textDocument/publishDiagnostics notif9 > 0:0 - 1: drv_unknown_argument
+2021/05/22 09:42:53 CLG <-- textDocument/publishDiagnostics notif9 > 0:0 - 1: drv_unknown_argument_with_suggestion
+2021/05/22 09:42:53 CLG <-- textDocument/publishDiagnostics notif9 > 0:9 - 1: unknown_typename
+2021/05/22 09:42:53 CLG <-- textDocument/publishDiagnostics notif9 > 0:0 - 1: fatal_too_many_errors
+2021/05/22 09:42:53 [92mIDE     LS <-- CL: ANSWER textDocument/documentSymbol 1 (1): [0m
+2021/05/22 09:42:53 SYLD--- [93m read-locked[0m
+2021/05/22 09:42:53 SYLD---    symbol: Function setup 15:0-15:12
+2021/05/22 09:42:53 SYLD---             > void setup()
+2021/05/22 09:42:53 SYLD---    symbol: Function loop 17:0-17:11
+2021/05/22 09:42:53 SYLD---             > void loop()
+2021/05/22 09:42:53 SYLD---    symbol: Function sonar1 19:0-19:13
+2021/05/22 09:42:53 SYLD---             > bool sonar1()
+2021/05/22 09:42:53 SYLD---    symbol: Function sonar2 21:0-21:13
+2021/05/22 09:42:53 SYLD---             > bool sonar2()
+2021/05/22 09:42:53 SYLD---    symbol: Function setup 23:0-31:1
+2021/05/22 09:42:53 SYLD---      TRIMMED> void setup()
+2021/05/22 09:42:53 SYLD---    symbol: Function loop 33:0-80:1
+2021/05/22 09:42:53 SYLD---      TRIMMED> void loop()
+2021/05/22 09:42:53 SYLD---    symbol: Function sonar1 83:0-116:1
+2021/05/22 09:42:53 SYLD---      TRIMMED> bool sonar1()
+2021/05/22 09:42:53 SYLD---    symbol: Function sonar2 118:0-149:1
+2021/05/22 09:42:53 SYLD---      TRIMMED> bool sonar2()
+2021/05/22 09:42:53 SYLD--- [93m read-unlocked[0m
+2021/05/22 09:42:53 SYLD--- (done)
+2021/05/22 09:42:53 [92mIDE     LS <-- CL: ANSWER textDocument/codeAction 2 (2): [0m
+2021/05/22 09:42:53     <-- codeAction(0 elements)
+2021/05/22 09:42:53 <-- codeAction(0 elements)
+2021/05/22 09:42:53 IDE --> textDocument/codeAction 1 [93m read-unlocked[0m
+2021/05/22 09:42:53     URI: converted 0:0-0:0 to /not-ino:0:0-0:0
+2021/05/22 09:42:53 [91mIDE <-- LS     CL: ANSWER UNBOUND (1): [0m
+2021/05/22 09:42:53 [92mIDE --> LS     CL: REQUEST textDocument/codeAction 2: [0m
+2021/05/22 09:42:53 IDE --> textDocument/codeAction 2 [93m read-locked[0m
+2021/05/22 09:42:53 --> codeAction(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino:25:31)
+2021/05/22 09:42:53     URI: converted 0:0-0:0 to /not-ino:0:0-0:0
+2021/05/22 09:42:53     URI: converted 0:9-0:10 to /not-ino:0:9-0:10
+2021/05/22 09:42:53     URI: converted 0:0-0:0 to /not-ino:0:0-0:0
+2021/05/22 09:42:53 CLG <-- textDocument/publishDiagnostics notif9 [93m read-unlocked[0m
+2021/05/22 09:42:53     --> codeAction(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server110526227/sketch/sonarrr.ino.cpp:36:31)
+2021/05/22 09:42:53 IDE --> textDocument/codeAction 2 sent to Clang
+2021/05/22 09:42:53 [91mIDE     LS --> CL: REQUEST textDocument/codeAction 3: [0m
+2021/05/22 09:42:53 [92mIDE     LS <-- CL: ANSWER textDocument/codeAction 3 (3): [0m
+2021/05/22 09:42:53     <-- codeAction(0 elements)
+2021/05/22 09:42:53 <-- codeAction(0 elements)
+2021/05/22 09:42:53 IDE --> textDocument/codeAction 2 [93m read-unlocked[0m
+2021/05/22 09:42:53 [91mIDE <-- LS     CL: ANSWER UNBOUND (2): [0m
+2021/05/22 09:42:53 [92mIDE --> LS     CL: NOTIFICATION $/cancelRequest: [0m
+2021/05/22 09:42:53 IDE --> $/cancelRequest notif3 [93m read-locked[0m
+2021/05/22 09:42:53 IDE --> $/cancelRequest notif3 sent to Clang
+2021/05/22 09:42:53 [91mIDE     LS --> CL: NOTIFICATION $/cancelRequest: [0m
+2021/05/22 09:42:53 IDE --> $/cancelRequest notif3 [93m read-unlocked[0m
+2021/05/22 09:42:53 [92mIDE --> LS     CL: ANSWER window/workDoneProgress/create 0 (0): [0m
+2021/05/22 09:42:53 [92mIDE --> LS     CL: REQUEST textDocument/hover 3: [0m
+2021/05/22 09:42:53 IDE --> textDocument/hover 3 [93m read-locked[0m
+2021/05/22 09:42:53 --> hover(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino:129:15)
+2021/05/22 09:42:53 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress BEGIN indexing [0m
+2021/05/22 09:42:53 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 1/39 2.5641025641025643%[0m
+2021/05/22 09:42:53     --> hover(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server110526227/sketch/sonarrr.ino.cpp:140:15)
+2021/05/22 09:42:53 IDE --> textDocument/hover 3 sent to Clang
+2021/05/22 09:42:53 [91mIDE     LS --> CL: REQUEST textDocument/hover 4: [0m
+2021/05/22 09:42:53 [92mIDE     LS <-- CL: ANSWER textDocument/hover 4 (4): [0m
+2021/05/22 09:42:53 IDE --> textDocument/hover 3 [93m read-unlocked[0m
+2021/05/22 09:42:53 [91mIDE <-- LS     CL: ANSWER UNBOUND (3): [0m
+2021/05/22 09:42:53 [92mIDE --> LS     CL: NOTIFICATION $/cancelRequest: [0m
+2021/05/22 09:42:53 IDE --> $/cancelRequest notif4 [93m read-locked[0m
+2021/05/22 09:42:53 IDE --> $/cancelRequest notif4 sent to Clang
+2021/05/22 09:42:53 [91mIDE     LS --> CL: NOTIFICATION $/cancelRequest: [0m
+2021/05/22 09:42:53 IDE --> $/cancelRequest notif4 [93m read-unlocked[0m
+2021/05/22 09:42:54 [92mIDE --> LS     CL: REQUEST textDocument/codeAction 4: [0m
+2021/05/22 09:42:54 IDE --> textDocument/codeAction 4 [93m read-locked[0m
+2021/05/22 09:42:54 --> codeAction(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino:72:0)
+2021/05/22 09:42:54     --> codeAction(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server110526227/sketch/sonarrr.ino.cpp:83:0)
+2021/05/22 09:42:54 IDE --> textDocument/codeAction 4 sent to Clang
+2021/05/22 09:42:54 [91mIDE     LS --> CL: REQUEST textDocument/codeAction 5: [0m
+2021/05/22 09:42:54 [92mIDE     LS <-- CL: ANSWER textDocument/codeAction 5 (5): [0m
+2021/05/22 09:42:54     <-- codeAction(0 elements)
+2021/05/22 09:42:54 <-- codeAction(0 elements)
+2021/05/22 09:42:54 IDE --> textDocument/codeAction 4 [93m read-unlocked[0m
+2021/05/22 09:42:54 [91mIDE <-- LS     CL: ANSWER UNBOUND (4): [0m
+2021/05/22 09:42:54 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 2/39 5.128205128205129%[0m
+2021/05/22 09:42:54 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 2/39 5.128205128205129%[0m
+2021/05/22 09:42:54 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 2/39 5.128205128205129%[0m
+2021/05/22 09:42:54 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 2/39 5.128205128205129%[0m
+2021/05/22 09:42:54 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 3/39 7.6923076923076925%[0m
+2021/05/22 09:42:54 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 3/39 7.6923076923076925%[0m
+2021/05/22 09:42:54 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 3/39 7.6923076923076925%[0m
+2021/05/22 09:42:55 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 4/39 10.256410256410257%[0m
+2021/05/22 09:42:55 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 4/39 10.256410256410257%[0m
+2021/05/22 09:42:55 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 4/39 10.256410256410257%[0m
+2021/05/22 09:42:55 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 4/39 10.256410256410257%[0m
+2021/05/22 09:42:56 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 5/39 12.820512820512821%[0m
+2021/05/22 09:42:56 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 5/39 12.820512820512821%[0m
+2021/05/22 09:42:56 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 5/39 12.820512820512821%[0m
+2021/05/22 09:42:56 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 5/39 12.820512820512821%[0m
+2021/05/22 09:42:56 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 6/39 15.384615384615385%[0m
+2021/05/22 09:42:56 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 6/39 15.384615384615385%[0m
+2021/05/22 09:42:56 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 6/39 15.384615384615385%[0m
+2021/05/22 09:42:56 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 6/39 15.384615384615385%[0m
+2021/05/22 09:42:57 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 7/39 17.94871794871795%[0m
+2021/05/22 09:42:57 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 7/39 17.94871794871795%[0m
+2021/05/22 09:42:57 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 7/39 17.94871794871795%[0m
+2021/05/22 09:42:57 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 8/39 20.512820512820515%[0m
+2021/05/22 09:42:57 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 8/39 20.512820512820515%[0m
+2021/05/22 09:42:57 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 8/39 20.512820512820515%[0m
+2021/05/22 09:42:57 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 8/39 20.512820512820515%[0m
+2021/05/22 09:42:58 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 9/39 23.076923076923077%[0m
+2021/05/22 09:42:58 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 9/39 23.076923076923077%[0m
+2021/05/22 09:42:58 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 9/39 23.076923076923077%[0m
+2021/05/22 09:42:58 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 9/39 23.076923076923077%[0m
+2021/05/22 09:42:59 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 10/39 25.641025641025642%[0m
+2021/05/22 09:42:59 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 10/39 25.641025641025642%[0m
+2021/05/22 09:42:59 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 10/39 25.641025641025642%[0m
+2021/05/22 09:42:59 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 10/39 25.641025641025642%[0m
+2021/05/22 09:43:00 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 11/39 28.205128205128204%[0m
+2021/05/22 09:43:00 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 11/39 28.205128205128204%[0m
+2021/05/22 09:43:00 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 11/39 28.205128205128204%[0m
+2021/05/22 09:43:00 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 11/39 28.205128205128204%[0m
+2021/05/22 09:43:00 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 12/39 30.76923076923077%[0m
+2021/05/22 09:43:00 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 12/39 30.76923076923077%[0m
+2021/05/22 09:43:00 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 12/39 30.76923076923077%[0m
+2021/05/22 09:43:00 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 12/39 30.76923076923077%[0m
+2021/05/22 09:43:00 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 13/39 33.333333333333336%[0m
+2021/05/22 09:43:00 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 13/39 33.333333333333336%[0m
+2021/05/22 09:43:00 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 13/39 33.333333333333336%[0m
+2021/05/22 09:43:00 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 14/39 35.8974358974359%[0m
+2021/05/22 09:43:00 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 14/39 35.8974358974359%[0m
+2021/05/22 09:43:00 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 14/39 35.8974358974359%[0m
+2021/05/22 09:43:00 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 14/39 35.8974358974359%[0m
+2021/05/22 09:43:00 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 15/39 38.46153846153846%[0m
+2021/05/22 09:43:00 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 15/39 38.46153846153846%[0m
+2021/05/22 09:43:00 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 15/39 38.46153846153846%[0m
+2021/05/22 09:43:00 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 15/39 38.46153846153846%[0m
+2021/05/22 09:43:01 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 16/39 41.02564102564103%[0m
+2021/05/22 09:43:01 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 16/39 41.02564102564103%[0m
+2021/05/22 09:43:01 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 16/39 41.02564102564103%[0m
+2021/05/22 09:43:01 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 17/39 43.58974358974359%[0m
+2021/05/22 09:43:01 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 17/39 43.58974358974359%[0m
+2021/05/22 09:43:01 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 17/39 43.58974358974359%[0m
+2021/05/22 09:43:01 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 17/39 43.58974358974359%[0m
+2021/05/22 09:43:01 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 18/39 46.15384615384615%[0m
+2021/05/22 09:43:01 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 18/39 46.15384615384615%[0m
+2021/05/22 09:43:01 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 18/39 46.15384615384615%[0m
+2021/05/22 09:43:01 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 18/39 46.15384615384615%[0m
+2021/05/22 09:43:01 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 19/39 48.717948717948715%[0m
+2021/05/22 09:43:01 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 19/39 48.717948717948715%[0m
+2021/05/22 09:43:01 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 19/39 48.717948717948715%[0m
+2021/05/22 09:43:01 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 19/39 48.717948717948715%[0m
+2021/05/22 09:43:02 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 20/39 51.282051282051285%[0m
+2021/05/22 09:43:02 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 20/39 51.282051282051285%[0m
+2021/05/22 09:43:02 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 20/39 51.282051282051285%[0m
+2021/05/22 09:43:02 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 20/39 51.282051282051285%[0m
+2021/05/22 09:43:02 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 21/39 53.84615384615385%[0m
+2021/05/22 09:43:02 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 21/39 53.84615384615385%[0m
+2021/05/22 09:43:02 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 21/39 53.84615384615385%[0m
+2021/05/22 09:43:02 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 21/39 53.84615384615385%[0m
+2021/05/22 09:43:02 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 22/39 56.41025641025641%[0m
+2021/05/22 09:43:02 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 22/39 56.41025641025641%[0m
+2021/05/22 09:43:02 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 22/39 56.41025641025641%[0m
+2021/05/22 09:43:03 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 23/39 58.97435897435897%[0m
+2021/05/22 09:43:03 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 23/39 58.97435897435897%[0m
+2021/05/22 09:43:03 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 23/39 58.97435897435897%[0m
+2021/05/22 09:43:03 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 23/39 58.97435897435897%[0m
+2021/05/22 09:43:03 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 24/39 61.53846153846154%[0m
+2021/05/22 09:43:03 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 24/39 61.53846153846154%[0m
+2021/05/22 09:43:03 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 24/39 61.53846153846154%[0m
+2021/05/22 09:43:03 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 25/39 64.1025641025641%[0m
+2021/05/22 09:43:03 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 25/39 64.1025641025641%[0m
+2021/05/22 09:43:03 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 25/39 64.1025641025641%[0m
+2021/05/22 09:43:03 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 26/39 66.66666666666667%[0m
+2021/05/22 09:43:03 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 26/39 66.66666666666667%[0m
+2021/05/22 09:43:03 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 26/39 66.66666666666667%[0m
+2021/05/22 09:43:03 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 26/39 66.66666666666667%[0m
+2021/05/22 09:43:03 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 27/39 69.23076923076923%[0m
+2021/05/22 09:43:03 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 27/39 69.23076923076923%[0m
+2021/05/22 09:43:03 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 27/39 69.23076923076923%[0m
+2021/05/22 09:43:04 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 28/39 71.7948717948718%[0m
+2021/05/22 09:43:04 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 28/39 71.7948717948718%[0m
+2021/05/22 09:43:04 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 28/39 71.7948717948718%[0m
+2021/05/22 09:43:04 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 28/39 71.7948717948718%[0m
+2021/05/22 09:43:04 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 29/39 74.35897435897436%[0m
+2021/05/22 09:43:04 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 29/39 74.35897435897436%[0m
+2021/05/22 09:43:04 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 29/39 74.35897435897436%[0m
+2021/05/22 09:43:04 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 29/39 74.35897435897436%[0m
+2021/05/22 09:43:04 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 30/39 76.92307692307692%[0m
+2021/05/22 09:43:04 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 30/39 76.92307692307692%[0m
+2021/05/22 09:43:04 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 30/39 76.92307692307692%[0m
+2021/05/22 09:43:04 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 30/39 76.92307692307692%[0m
+2021/05/22 09:43:05 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 31/39 79.48717948717949%[0m
+2021/05/22 09:43:05 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 31/39 79.48717948717949%[0m
+2021/05/22 09:43:05 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 31/39 79.48717948717949%[0m
+2021/05/22 09:43:05 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 32/39 82.05128205128206%[0m
+2021/05/22 09:43:05 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 32/39 82.05128205128206%[0m
+2021/05/22 09:43:05 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 32/39 82.05128205128206%[0m
+2021/05/22 09:43:05 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 32/39 82.05128205128206%[0m
+2021/05/22 09:43:06 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 33/39 84.61538461538461%[0m
+2021/05/22 09:43:06 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 33/39 84.61538461538461%[0m
+2021/05/22 09:43:06 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 33/39 84.61538461538461%[0m
+2021/05/22 09:43:06 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 33/39 84.61538461538461%[0m
+2021/05/22 09:43:06 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 34/39 87.17948717948718%[0m
+2021/05/22 09:43:06 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 34/39 87.17948717948718%[0m
+2021/05/22 09:43:06 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 34/39 87.17948717948718%[0m
+2021/05/22 09:43:06 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 34/39 87.17948717948718%[0m
+2021/05/22 09:43:06 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 35/39 89.74358974358974%[0m
+2021/05/22 09:43:06 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 35/39 89.74358974358974%[0m
+2021/05/22 09:43:06 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 35/39 89.74358974358974%[0m
+2021/05/22 09:43:06 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 36/39 92.3076923076923%[0m
+2021/05/22 09:43:06 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 36/39 92.3076923076923%[0m
+2021/05/22 09:43:07 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 37/39 94.87179487179488%[0m
+2021/05/22 09:43:07 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 37/39 94.87179487179488%[0m
+2021/05/22 09:43:07 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 38/39 97.43589743589743%[0m
+2021/05/22 09:43:07 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 38/39 97.43589743589743%[0m
+2021/05/22 09:43:08 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress END [0m
+2021/05/22 09:43:08 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress END [0m
+2021/05/22 09:46:37 [92mIDE --> LS     CL: REQUEST shutdown 5: [0m
+2021/05/22 09:46:37 IDE --> shutdown 5 [93m read-locked[0m
+2021/05/22 09:46:37 IDE --> shutdown 5 sent to Clang
+2021/05/22 09:46:37 [91mIDE     LS --> CL: REQUEST shutdown 6: [0m
+2021/05/22 09:46:37 [92mIDE     LS <-- CL: ANSWER shutdown 6 (6): [0m
+2021/05/22 09:46:37 IDE --> shutdown 5 [93m read-unlocked[0m
+2021/05/22 09:46:37 [91mIDE <-- LS     CL: ANSWER UNBOUND (5): [0m
+2021/05/22 09:46:37 [92mIDE --> LS     CL: NOTIFICATION exit: [0m
+2021/05/22 09:46:37 IDE --> exit notif5 [93m read-locked[0m
+2021/05/22 09:46:37 IDE --> exit notif5 sent to Clang
+2021/05/22 09:46:37 [91mIDE     LS --> CL: NOTIFICATION exit: [0m
+2021/05/22 09:46:37 IDE --> exit notif5 [93m read-unlocked[0m
+2021/05/22 09:46:37 Lost connection with clangd!
+2021/05/22 09:46:37 removing buildpath
+
+
+
+
+
+
+
+Started logging.
+2021/05/28 16:20:19 logging to c:\Users\ricar\Desktop\ApiPrograms\sonarrr\inols.log
+2021/05/28 16:20:19 Initial board configuration: {"ESP32 Pico Kit" esp32:esp32:pico32}
+2021/05/28 16:20:19 Language server build path: C:\Users\ricar\AppData\Local\Temp\arduino-language-server752676171
+2021/05/28 16:20:19 Language server build sketch root: C:\Users\ricar\AppData\Local\Temp\arduino-language-server752676171\sketch
+2021/05/28 16:20:19 [92mIDE --> LS     CL: REQUEST initialize 0: [0m
+2021/05/28 16:20:19 IDE --> initialize 0 [93m locked[0m
+2021/05/28 16:20:19 IDE --> initialize 0 [93m unlocked[0m
+2021/05/28 16:20:19 INIT--- initializing workbench
+2021/05/28 16:20:19 INIT--- [93m locked[0m
+2021/05/28 16:20:19 [91mIDE <-- LS     CL: ANSWER UNBOUND (0): [0m
+2021/05/28 16:20:19     --> initialize(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr)
+2021/05/28 16:20:20 [92mIDE --> LS     CL: NOTIFICATION initialized: [0m
+2021/05/28 16:20:20 running:  c:\Users\ricar\AppData\Local\Programs\Arduino IDE\resources\app\node_modules\arduino-ide-extension\build\arduino-cli.exe compile --fqbn esp32:esp32:pico32 --only-compilation-database --clean --source-override C:\Users\ricar\AppData\Local\Temp\601760814 --build-path C:\Users\ricar\AppData\Local\Temp\arduino-language-server752676171 --format json C:\Users\ricar\Desktop\ApiPrograms\sonarrr
+2021/05/28 16:20:35 arduino-cli output: {
+  "compiler_out": "",
+  "compiler_err": "",
+  "builder_result": {
+    "build_path": "C:\\Users\\ricar\\AppData\\Local\\Temp\\arduino-language-server752676171"
+  },
+  "success": true
+}
+
+2021/05/28 16:20:35 running:  c:\Users\ricar\AppData\Local\Programs\Arduino IDE\resources\app\node_modules\arduino-ide-extension\build\arduino-cli.exe config dump --format json
+2021/05/28 16:20:35 Arduino Data Dir ->  C:\Users\ricar\AppData\Local\Arduino15
+2021/05/28 16:20:35     Starting clangd: c:\Users\ricar\AppData\Local\Programs\Arduino IDE\resources\app\node_modules\arduino-ide-extension\build\bin\clangd.exe -log=verbose --compile-commands-dir=C:\Users\ricar\AppData\Local\Temp\arduino-language-server752676171 -query-driver=C:\Users\ricar\AppData\Local\Arduino15\packages\**
+2021/05/28 16:20:35 logging to c:\Users\ricar\Desktop\ApiPrograms\sonarrr\inols-clangd.log
+2021/05/28 16:20:35 logging to c:\Users\ricar\Desktop\ApiPrograms\sonarrr\inols-clangd-err.log
+2021/05/28 16:20:36 [91mIDE     LS --> CL: REQUEST initialize 0: [0m
+2021/05/28 16:20:36 [92mIDE     LS <-- CL: ANSWER initialize 0 (0): [0m
+2021/05/28 16:20:36 [91mIDE     LS --> CL: NOTIFICATION initialized: [0m
+2021/05/28 16:20:36 INIT--- initializing workbench (done)
+2021/05/28 16:20:36 INIT--- [93m unlocked[0m
+2021/05/28 16:20:36 IDE --> initialized notif1 [93m read-locked[0m
+2021/05/28 16:20:36 IDE --> initialized notif1 notification is not propagated to clangd
+2021/05/28 16:20:36 IDE --> initialized notif1 [93m read-unlocked[0m
+2021/05/28 16:20:36 [92mIDE --> LS     CL: NOTIFICATION textDocument/didOpen: [0m
+2021/05/28 16:20:36 IDE --> textDocument/didOpen notif2 [93m locked[0m
+2021/05/28 16:20:36 IDE --> textDocument/didOpen notif2 (file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino@1 as 'cpp')
+2021/05/28 16:20:36     increasing .ino tracked files count: 1
+2021/05/28 16:20:36 IDE --> textDocument/didOpen notif2 to clang: didOpen(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server752676171/sketch/sonarrr.ino.cpp@1 as 'cpp')
+2021/05/28 16:20:36 IDE --> textDocument/didOpen notif2 sent to Clang
+2021/05/28 16:20:36 [91mIDE     LS --> CL: NOTIFICATION textDocument/didOpen: [0m
+2021/05/28 16:20:36 IDE --> textDocument/didOpen notif2 Queued resfreshing document symbols
+2021/05/28 16:20:36 IDE --> textDocument/didOpen notif2 [93m unlocked[0m
+2021/05/28 16:20:36 SYLD--- [93m read-locked[0m
+2021/05/28 16:20:36 [92mIDE --> LS     CL: REQUEST textDocument/codeAction 1: [0m
+2021/05/28 16:20:36 IDE --> textDocument/codeAction 1 [93m read-locked[0m
+2021/05/28 16:20:36 --> codeAction(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino:72:0)
+2021/05/28 16:20:36 SYLD--- requesting documentSymbol for file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server752676171/sketch/sonarrr.ino.cpp
+2021/05/28 16:20:36 SYLD--- [93m read-unlocked[0m
+2021/05/28 16:20:36 [91mIDE     LS --> CL: REQUEST textDocument/documentSymbol 1: [0m
+2021/05/28 16:20:36     --> codeAction(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server752676171/sketch/sonarrr.ino.cpp:83:0)
+2021/05/28 16:20:36 IDE --> textDocument/codeAction 1 sent to Clang
+2021/05/28 16:20:36 [91mIDE     LS --> CL: REQUEST textDocument/codeAction 2: [0m
+2021/05/28 16:20:36 [92mIDE     LS <-- CL: REQUEST window/workDoneProgress/create 0: [0m
+2021/05/28 16:20:36 [91mIDE     LS --> CL: ANSWER UNBOUND (0): [0m
+2021/05/28 16:20:36 [91mIDE <-- LS     CL: REQUEST window/workDoneProgress/create 0: [0m
+2021/05/28 16:20:36 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress BEGIN indexing [0m
+2021/05/28 16:20:36 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 0/1 0%[0m
+2021/05/28 16:20:36 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 0/39 0%[0m
+2021/05/28 16:20:36 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 0/39 0%[0m
+2021/05/28 16:20:36 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 0/39 0%[0m
+2021/05/28 16:20:36 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 1/39 2.5641025641025643%[0m
+2021/05/28 16:20:36 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 1/39 2.5641025641025643%[0m
+2021/05/28 16:20:36 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 1/39 2.5641025641025643%[0m
+2021/05/28 16:20:37 [92mIDE     LS <-- CL: NOTIFICATION textDocument/publishDiagnostics: [0m
+2021/05/28 16:20:37 CLG <-- textDocument/publishDiagnostics notif9 (queued)
+2021/05/28 16:20:37 CLG <-- textDocument/publishDiagnostics notif9 [93m read-locked[0m
+2021/05/28 16:20:37 CLG <-- textDocument/publishDiagnostics notif9 (running)
+2021/05/28 16:20:37 CLG <-- textDocument/publishDiagnostics notif9 publishDiagnostics(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server752676171/sketch/sonarrr.ino.cpp):
+2021/05/28 16:20:37 CLG <-- textDocument/publishDiagnostics notif9 > 0:0 - 1: drv_unknown_argument
+2021/05/28 16:20:37 CLG <-- textDocument/publishDiagnostics notif9 > 0:0 - 1: drv_unknown_argument_with_suggestion
+2021/05/28 16:20:37 CLG <-- textDocument/publishDiagnostics notif9 > 0:9 - 1: unknown_typename
+2021/05/28 16:20:37 CLG <-- textDocument/publishDiagnostics notif9 > 0:0 - 1: fatal_too_many_errors
+2021/05/28 16:20:37 [92mIDE     LS <-- CL: ANSWER textDocument/documentSymbol 1 (1): [0m
+2021/05/28 16:20:37 SYLD--- [93m read-locked[0m
+2021/05/28 16:20:37 SYLD---    symbol: Function setup 15:0-15:12
+2021/05/28 16:20:37 SYLD---             > void setup()
+2021/05/28 16:20:37 SYLD---    symbol: Function loop 17:0-17:11
+2021/05/28 16:20:37 SYLD---             > void loop()
+2021/05/28 16:20:37 SYLD---    symbol: Function sonar1 19:0-19:13
+2021/05/28 16:20:37 SYLD---             > bool sonar1()
+2021/05/28 16:20:37 SYLD---    symbol: Function sonar2 21:0-21:13
+2021/05/28 16:20:37 SYLD---             > bool sonar2()
+2021/05/28 16:20:37 SYLD---    symbol: Function setup 23:0-31:1
+2021/05/28 16:20:37 SYLD---      TRIMMED> void setup()
+2021/05/28 16:20:37 SYLD---    symbol: Function loop 33:0-80:1
+2021/05/28 16:20:37 SYLD---      TRIMMED> void loop()
+2021/05/28 16:20:37 SYLD---    symbol: Function sonar1 83:0-116:1
+2021/05/28 16:20:37 SYLD---      TRIMMED> bool sonar1()
+2021/05/28 16:20:37 SYLD---    symbol: Function sonar2 118:0-149:1
+2021/05/28 16:20:37 SYLD---      TRIMMED> bool sonar2()
+2021/05/28 16:20:37 SYLD--- [93m read-unlocked[0m
+2021/05/28 16:20:37 SYLD--- (done)
+2021/05/28 16:20:37 [92mIDE     LS <-- CL: ANSWER textDocument/codeAction 2 (2): [0m
+2021/05/28 16:20:37     URI: converted 0:0-0:0 to /not-ino:0:0-0:0
+2021/05/28 16:20:37     URI: converted 0:0-0:0 to /not-ino:0:0-0:0
+2021/05/28 16:20:37     URI: converted 0:9-0:10 to /not-ino:0:9-0:10
+2021/05/28 16:20:37     URI: converted 0:0-0:0 to /not-ino:0:0-0:0
+2021/05/28 16:20:37 CLG <-- textDocument/publishDiagnostics notif9 [93m read-unlocked[0m
+2021/05/28 16:20:37     <-- codeAction(0 elements)
+2021/05/28 16:20:37 <-- codeAction(0 elements)
+2021/05/28 16:20:37 IDE --> textDocument/codeAction 1 [93m read-unlocked[0m
+2021/05/28 16:20:37 [91mIDE <-- LS     CL: ANSWER UNBOUND (1): [0m
+2021/05/28 16:20:37 [92mIDE --> LS     CL: ANSWER window/workDoneProgress/create 0 (0): [0m
+2021/05/28 16:20:37 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress BEGIN indexing [0m
+2021/05/28 16:20:37 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 1/39 2.5641025641025643%[0m
+2021/05/28 16:20:45 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 2/39 5.128205128205129%[0m
+2021/05/28 16:20:45 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 2/39 5.128205128205129%[0m
+2021/05/28 16:20:45 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 2/39 5.128205128205129%[0m
+2021/05/28 16:20:45 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 2/39 5.128205128205129%[0m
+2021/05/28 16:20:45 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 3/39 7.6923076923076925%[0m
+2021/05/28 16:20:45 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 3/39 7.6923076923076925%[0m
+2021/05/28 16:20:45 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 3/39 7.6923076923076925%[0m
+2021/05/28 16:20:45 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 3/39 7.6923076923076925%[0m
+2021/05/28 16:20:46 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 4/39 10.256410256410257%[0m
+2021/05/28 16:20:46 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 4/39 10.256410256410257%[0m
+2021/05/28 16:20:46 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 4/39 10.256410256410257%[0m
+2021/05/28 16:20:46 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 4/39 10.256410256410257%[0m
+2021/05/28 16:20:46 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 5/39 12.820512820512821%[0m
+2021/05/28 16:20:46 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 5/39 12.820512820512821%[0m
+2021/05/28 16:20:46 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 5/39 12.820512820512821%[0m
+2021/05/28 16:20:46 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 5/39 12.820512820512821%[0m
+2021/05/28 16:20:46 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 6/39 15.384615384615385%[0m
+2021/05/28 16:20:46 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 6/39 15.384615384615385%[0m
+2021/05/28 16:20:46 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 6/39 15.384615384615385%[0m
+2021/05/28 16:20:46 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 6/39 15.384615384615385%[0m
+2021/05/28 16:20:46 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 7/39 17.94871794871795%[0m
+2021/05/28 16:20:46 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 7/39 17.94871794871795%[0m
+2021/05/28 16:20:46 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 7/39 17.94871794871795%[0m
+2021/05/28 16:20:46 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 7/39 17.94871794871795%[0m
+2021/05/28 16:20:49 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 8/39 20.512820512820515%[0m
+2021/05/28 16:20:49 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 8/39 20.512820512820515%[0m
+2021/05/28 16:20:49 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 8/39 20.512820512820515%[0m
+2021/05/28 16:20:49 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 8/39 20.512820512820515%[0m
+2021/05/28 16:20:49 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 9/39 23.076923076923077%[0m
+2021/05/28 16:20:49 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 9/39 23.076923076923077%[0m
+2021/05/28 16:20:49 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 9/39 23.076923076923077%[0m
+2021/05/28 16:20:49 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 9/39 23.076923076923077%[0m
+2021/05/28 16:20:50 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 10/39 25.641025641025642%[0m
+2021/05/28 16:20:50 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 10/39 25.641025641025642%[0m
+2021/05/28 16:20:50 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 10/39 25.641025641025642%[0m
+2021/05/28 16:20:50 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 10/39 25.641025641025642%[0m
+2021/05/28 16:20:50 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 11/39 28.205128205128204%[0m
+2021/05/28 16:20:50 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 11/39 28.205128205128204%[0m
+2021/05/28 16:20:50 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 11/39 28.205128205128204%[0m
+2021/05/28 16:20:50 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 11/39 28.205128205128204%[0m
+2021/05/28 16:20:50 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 12/39 30.76923076923077%[0m
+2021/05/28 16:20:50 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 12/39 30.76923076923077%[0m
+2021/05/28 16:20:50 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 12/39 30.76923076923077%[0m
+2021/05/28 16:20:50 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 12/39 30.76923076923077%[0m
+2021/05/28 16:20:51 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 13/39 33.333333333333336%[0m
+2021/05/28 16:20:51 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 13/39 33.333333333333336%[0m
+2021/05/28 16:20:51 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 13/39 33.333333333333336%[0m
+2021/05/28 16:20:51 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 13/39 33.333333333333336%[0m
+2021/05/28 16:20:51 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 14/39 35.8974358974359%[0m
+2021/05/28 16:20:51 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 14/39 35.8974358974359%[0m
+2021/05/28 16:20:51 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 14/39 35.8974358974359%[0m
+2021/05/28 16:20:51 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 14/39 35.8974358974359%[0m
+2021/05/28 16:20:51 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 15/39 38.46153846153846%[0m
+2021/05/28 16:20:51 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 15/39 38.46153846153846%[0m
+2021/05/28 16:20:51 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 15/39 38.46153846153846%[0m
+2021/05/28 16:20:51 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 15/39 38.46153846153846%[0m
+2021/05/28 16:20:51 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 16/39 41.02564102564103%[0m
+2021/05/28 16:20:51 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 16/39 41.02564102564103%[0m
+2021/05/28 16:20:51 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 16/39 41.02564102564103%[0m
+2021/05/28 16:20:51 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 16/39 41.02564102564103%[0m
+2021/05/28 16:20:51 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 17/39 43.58974358974359%[0m
+2021/05/28 16:20:51 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 17/39 43.58974358974359%[0m
+2021/05/28 16:20:51 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 17/39 43.58974358974359%[0m
+2021/05/28 16:20:51 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 17/39 43.58974358974359%[0m
+2021/05/28 16:20:51 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 18/39 46.15384615384615%[0m
+2021/05/28 16:20:51 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 18/39 46.15384615384615%[0m
+2021/05/28 16:20:51 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 18/39 46.15384615384615%[0m
+2021/05/28 16:20:51 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 18/39 46.15384615384615%[0m
+2021/05/28 16:20:52 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 19/39 48.717948717948715%[0m
+2021/05/28 16:20:52 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 19/39 48.717948717948715%[0m
+2021/05/28 16:20:52 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 19/39 48.717948717948715%[0m
+2021/05/28 16:20:52 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 19/39 48.717948717948715%[0m
+2021/05/28 16:20:52 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 20/39 51.282051282051285%[0m
+2021/05/28 16:20:52 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 20/39 51.282051282051285%[0m
+2021/05/28 16:20:52 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 20/39 51.282051282051285%[0m
+2021/05/28 16:20:52 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 20/39 51.282051282051285%[0m
+2021/05/28 16:20:52 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 21/39 53.84615384615385%[0m
+2021/05/28 16:20:52 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 21/39 53.84615384615385%[0m
+2021/05/28 16:20:52 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 21/39 53.84615384615385%[0m
+2021/05/28 16:20:52 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 21/39 53.84615384615385%[0m
+2021/05/28 16:20:52 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 22/39 56.41025641025641%[0m
+2021/05/28 16:20:52 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 22/39 56.41025641025641%[0m
+2021/05/28 16:20:52 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 22/39 56.41025641025641%[0m
+2021/05/28 16:20:52 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 22/39 56.41025641025641%[0m
+2021/05/28 16:20:53 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 23/39 58.97435897435897%[0m
+2021/05/28 16:20:53 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 23/39 58.97435897435897%[0m
+2021/05/28 16:20:53 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 23/39 58.97435897435897%[0m
+2021/05/28 16:20:53 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 23/39 58.97435897435897%[0m
+2021/05/28 16:20:53 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 24/39 61.53846153846154%[0m
+2021/05/28 16:20:53 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 24/39 61.53846153846154%[0m
+2021/05/28 16:20:53 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 24/39 61.53846153846154%[0m
+2021/05/28 16:20:53 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 24/39 61.53846153846154%[0m
+2021/05/28 16:20:53 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 25/39 64.1025641025641%[0m
+2021/05/28 16:20:53 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 25/39 64.1025641025641%[0m
+2021/05/28 16:20:53 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 25/39 64.1025641025641%[0m
+2021/05/28 16:20:53 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 25/39 64.1025641025641%[0m
+2021/05/28 16:20:53 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 26/39 66.66666666666667%[0m
+2021/05/28 16:20:53 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 26/39 66.66666666666667%[0m
+2021/05/28 16:20:53 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 26/39 66.66666666666667%[0m
+2021/05/28 16:20:53 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 27/39 69.23076923076923%[0m
+2021/05/28 16:20:53 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 27/39 69.23076923076923%[0m
+2021/05/28 16:20:53 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 27/39 69.23076923076923%[0m
+2021/05/28 16:20:53 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 27/39 69.23076923076923%[0m
+2021/05/28 16:20:54 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 28/39 71.7948717948718%[0m
+2021/05/28 16:20:54 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 28/39 71.7948717948718%[0m
+2021/05/28 16:20:54 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 28/39 71.7948717948718%[0m
+2021/05/28 16:20:54 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 28/39 71.7948717948718%[0m
+2021/05/28 16:20:54 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 29/39 74.35897435897436%[0m
+2021/05/28 16:20:54 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 29/39 74.35897435897436%[0m
+2021/05/28 16:20:54 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 29/39 74.35897435897436%[0m
+2021/05/28 16:20:54 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 29/39 74.35897435897436%[0m
+2021/05/28 16:20:54 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 30/39 76.92307692307692%[0m
+2021/05/28 16:20:54 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 30/39 76.92307692307692%[0m
+2021/05/28 16:20:54 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 30/39 76.92307692307692%[0m
+2021/05/28 16:20:54 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 30/39 76.92307692307692%[0m
+2021/05/28 16:20:54 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 31/39 79.48717948717949%[0m
+2021/05/28 16:20:54 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 31/39 79.48717948717949%[0m
+2021/05/28 16:20:54 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 31/39 79.48717948717949%[0m
+2021/05/28 16:20:54 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 31/39 79.48717948717949%[0m
+2021/05/28 16:20:55 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 32/39 82.05128205128206%[0m
+2021/05/28 16:20:55 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 32/39 82.05128205128206%[0m
+2021/05/28 16:20:55 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 32/39 82.05128205128206%[0m
+2021/05/28 16:20:55 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 32/39 82.05128205128206%[0m
+2021/05/28 16:20:55 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 33/39 84.61538461538461%[0m
+2021/05/28 16:20:55 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 33/39 84.61538461538461%[0m
+2021/05/28 16:20:55 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 33/39 84.61538461538461%[0m
+2021/05/28 16:20:56 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 34/39 87.17948717948718%[0m
+2021/05/28 16:20:56 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 34/39 87.17948717948718%[0m
+2021/05/28 16:20:56 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 34/39 87.17948717948718%[0m
+2021/05/28 16:20:56 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 34/39 87.17948717948718%[0m
+2021/05/28 16:20:56 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 35/39 89.74358974358974%[0m
+2021/05/28 16:20:56 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 35/39 89.74358974358974%[0m
+2021/05/28 16:20:56 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 35/39 89.74358974358974%[0m
+2021/05/28 16:20:56 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 35/39 89.74358974358974%[0m
+2021/05/28 16:20:56 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 36/39 92.3076923076923%[0m
+2021/05/28 16:20:56 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 36/39 92.3076923076923%[0m
+2021/05/28 16:20:57 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 37/39 94.87179487179488%[0m
+2021/05/28 16:20:57 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 37/39 94.87179487179488%[0m
+2021/05/28 16:20:58 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 38/39 97.43589743589743%[0m
+2021/05/28 16:20:58 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 38/39 97.43589743589743%[0m
+2021/05/28 16:20:58 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress END [0m
+2021/05/28 16:20:58 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress END [0m
+2021/05/28 16:37:52 [92mIDE --> LS     CL: REQUEST textDocument/codeAction 2: [0m
+2021/05/28 16:37:52 IDE --> textDocument/codeAction 2 [93m read-locked[0m
+2021/05/28 16:37:52 --> codeAction(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino:72:13)
+2021/05/28 16:37:52     --> codeAction(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server752676171/sketch/sonarrr.ino.cpp:83:13)
+2021/05/28 16:37:52 IDE --> textDocument/codeAction 2 sent to Clang
+2021/05/28 16:37:52 [91mIDE     LS --> CL: REQUEST textDocument/codeAction 3: [0m
+2021/05/28 16:37:52 [92mIDE     LS <-- CL: ANSWER textDocument/codeAction 3 (3): [0m
+2021/05/28 16:37:52     <-- codeAction(0 elements)
+2021/05/28 16:37:52 <-- codeAction(0 elements)
+2021/05/28 16:37:52 IDE --> textDocument/codeAction 2 [93m read-unlocked[0m
+2021/05/28 16:37:52 [91mIDE <-- LS     CL: ANSWER UNBOUND (2): [0m
+2021/05/28 16:37:57 [92mIDE --> LS     CL: REQUEST textDocument/hover 3: [0m
+2021/05/28 16:37:57 IDE --> textDocument/hover 3 [93m read-locked[0m
+2021/05/28 16:37:57 --> hover(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino:51:1)
+2021/05/28 16:37:57     --> hover(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server752676171/sketch/sonarrr.ino.cpp:62:1)
+2021/05/28 16:37:57 IDE --> textDocument/hover 3 sent to Clang
+2021/05/28 16:37:57 [91mIDE     LS --> CL: REQUEST textDocument/hover 4: [0m
+2021/05/28 16:37:57 [92mIDE     LS <-- CL: ANSWER textDocument/hover 4 (4): [0m
+2021/05/28 16:37:57 IDE --> textDocument/hover 3 [93m read-unlocked[0m
+2021/05/28 16:37:57 [91mIDE <-- LS     CL: ANSWER UNBOUND (3): [0m
+2021/05/28 16:38:01 [92mIDE --> LS     CL: REQUEST textDocument/codeAction 4: [0m
+2021/05/28 16:38:01 IDE --> textDocument/codeAction 4 [93m read-locked[0m
+2021/05/28 16:38:01 --> codeAction(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino:19:23)
+2021/05/28 16:38:01     --> codeAction(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server752676171/sketch/sonarrr.ino.cpp:30:23)
+2021/05/28 16:38:01 IDE --> textDocument/codeAction 4 sent to Clang
+2021/05/28 16:38:01 [91mIDE     LS --> CL: REQUEST textDocument/codeAction 5: [0m
+2021/05/28 16:38:01 [92mIDE     LS <-- CL: ANSWER textDocument/codeAction 5 (5): [0m
+2021/05/28 16:38:01     <-- codeAction(0 elements)
+2021/05/28 16:38:01 <-- codeAction(0 elements)
+2021/05/28 16:38:01 IDE --> textDocument/codeAction 4 [93m read-unlocked[0m
+2021/05/28 16:38:01 [91mIDE <-- LS     CL: ANSWER UNBOUND (4): [0m
+2021/05/28 16:38:02 [92mIDE --> LS     CL: REQUEST textDocument/codeAction 5: [0m
+2021/05/28 16:38:02 IDE --> textDocument/codeAction 5 [93m read-locked[0m
+2021/05/28 16:38:02 --> codeAction(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino:14:4)
+2021/05/28 16:38:02     --> codeAction(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server752676171/sketch/sonarrr.ino.cpp:25:4)
+2021/05/28 16:38:02 IDE --> textDocument/codeAction 5 sent to Clang
+2021/05/28 16:38:02 [91mIDE     LS --> CL: REQUEST textDocument/codeAction 6: [0m
+2021/05/28 16:38:02 [92mIDE     LS <-- CL: ANSWER textDocument/codeAction 6 (6): [0m
+2021/05/28 16:38:02     <-- codeAction(1 elements)
+2021/05/28 16:38:02         > CodeAction: Extract to function
+2021/05/28 16:38:02 <-- codeAction(1 elements)
+2021/05/28 16:38:02 IDE --> textDocument/codeAction 5 [93m read-unlocked[0m
+2021/05/28 16:38:02 [91mIDE <-- LS     CL: ANSWER UNBOUND (5): [0m
+2021/05/28 16:38:03 [92mIDE --> LS     CL: REQUEST textDocument/codeAction 6: [0m
+2021/05/28 16:38:03 IDE --> textDocument/codeAction 6 [93m read-locked[0m
+2021/05/28 16:38:03 --> codeAction(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino:15:29)
+2021/05/28 16:38:03     --> codeAction(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server752676171/sketch/sonarrr.ino.cpp:26:29)
+2021/05/28 16:38:03 IDE --> textDocument/codeAction 6 sent to Clang
+2021/05/28 16:38:03 [91mIDE     LS --> CL: REQUEST textDocument/codeAction 7: [0m
+2021/05/28 16:38:03 [92mIDE     LS <-- CL: ANSWER textDocument/codeAction 7 (7): [0m
+2021/05/28 16:38:03     <-- codeAction(0 elements)
+2021/05/28 16:38:03 <-- codeAction(0 elements)
+2021/05/28 16:38:03 IDE --> textDocument/codeAction 6 [93m read-unlocked[0m
+2021/05/28 16:38:03 [91mIDE <-- LS     CL: ANSWER UNBOUND (6): [0m
+2021/05/28 16:38:04 [92mIDE --> LS     CL: REQUEST textDocument/codeAction 7: [0m
+2021/05/28 16:38:04 IDE --> textDocument/codeAction 7 [93m read-locked[0m
+2021/05/28 16:38:04 --> codeAction(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino:14:4)
+2021/05/28 16:38:04     --> codeAction(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server752676171/sketch/sonarrr.ino.cpp:25:4)
+2021/05/28 16:38:04 IDE --> textDocument/codeAction 7 sent to Clang
+2021/05/28 16:38:04 [91mIDE     LS --> CL: REQUEST textDocument/codeAction 8: [0m
+2021/05/28 16:38:04 [92mIDE     LS <-- CL: ANSWER textDocument/codeAction 8 (8): [0m
+2021/05/28 16:38:04     <-- codeAction(1 elements)
+2021/05/28 16:38:04         > CodeAction: Extract to function
+2021/05/28 16:38:04 <-- codeAction(1 elements)
+2021/05/28 16:38:04 IDE --> textDocument/codeAction 7 [93m read-unlocked[0m
+2021/05/28 16:38:04 [91mIDE <-- LS     CL: ANSWER UNBOUND (7): [0m
+2021/05/28 16:38:04 [92mIDE --> LS     CL: REQUEST textDocument/hover 8: [0m
+2021/05/28 16:38:04 IDE --> textDocument/hover 8 [93m read-locked[0m
+2021/05/28 16:38:04 --> hover(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino:14:3)
+2021/05/28 16:38:04     --> hover(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server752676171/sketch/sonarrr.ino.cpp:25:3)
+2021/05/28 16:38:04 IDE --> textDocument/hover 8 sent to Clang
+2021/05/28 16:38:04 [91mIDE     LS --> CL: REQUEST textDocument/hover 9: [0m
+2021/05/28 16:38:04 [92mIDE     LS <-- CL: ANSWER textDocument/hover 9 (9): [0m
+2021/05/28 16:38:04 IDE --> textDocument/hover 8 [93m read-unlocked[0m
+2021/05/28 16:38:04 [91mIDE <-- LS     CL: ANSWER UNBOUND (8): [0m
+2021/05/28 16:38:05 [92mIDE --> LS     CL: REQUEST textDocument/codeAction 9: [0m
+2021/05/28 16:38:05 IDE --> textDocument/codeAction 9 [93m read-locked[0m
+2021/05/28 16:38:05 --> codeAction(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino:14:3)
+2021/05/28 16:38:05     --> codeAction(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server752676171/sketch/sonarrr.ino.cpp:25:3)
+2021/05/28 16:38:05 IDE --> textDocument/codeAction 9 sent to Clang
+2021/05/28 16:38:05 [91mIDE     LS --> CL: REQUEST textDocument/codeAction 10: [0m
+2021/05/28 16:38:05 [92mIDE     LS <-- CL: ANSWER textDocument/codeAction 10 (10): [0m
+2021/05/28 16:38:05     <-- codeAction(1 elements)
+2021/05/28 16:38:05         > CodeAction: Extract to function
+2021/05/28 16:38:05 <-- codeAction(1 elements)
+2021/05/28 16:38:05 IDE --> textDocument/codeAction 9 [93m read-unlocked[0m
+2021/05/28 16:38:05 [91mIDE <-- LS     CL: ANSWER UNBOUND (9): [0m
+2021/05/28 16:38:06 [92mIDE --> LS     CL: NOTIFICATION textDocument/didChange: [0m
+2021/05/28 16:38:06 IDE --> textDocument/didChange notif3 [93m locked[0m
+2021/05/28 16:38:06 --> didChange(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino@2)
+2021/05/28 16:38:06      > 19:0-19:4 -> "  "
+2021/05/28 16:38:06      > 17:0-17:4 -> "  "
+2021/05/28 16:38:06      > 16:0-16:4 -> "  "
+2021/05/28 16:38:06      > 15:0-15:4 -> "  "
+2021/05/28 16:38:06      > 14:0-14:4 -> "  "
+2021/05/28 16:38:06 INCK--- #include change detected, triggering sketch rebuild!
+2021/05/28 16:38:06     --> didChange(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server752676171/sketch/sonarrr.ino.cpp@6)
+2021/05/28 16:38:06          > 30:0-30:4 -> "  "
+2021/05/28 16:38:06          > 28:0-28:4 -> "  "
+2021/05/28 16:38:06          > 27:0-27:4 -> "  "
+2021/05/28 16:38:06          > 26:0-26:4 -> "  "
+2021/05/28 16:38:06          > 25:0-25:4 -> "  "
+2021/05/28 16:38:06 [91mIDE     LS --> CL: NOTIFICATION textDocument/didChange: [0m
+2021/05/28 16:38:06 IDE --> textDocument/didChange notif3 [93m unlocked[0m
+2021/05/28 16:38:07 [92mIDE --> LS     CL: REQUEST textDocument/codeAction 10: [0m
+2021/05/28 16:38:07 IDE --> textDocument/codeAction 10 [93m read-locked[0m
+2021/05/28 16:38:07 --> codeAction(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino:14:2)
+2021/05/28 16:38:07     --> codeAction(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server752676171/sketch/sonarrr.ino.cpp:25:2)
+2021/05/28 16:38:07 IDE --> textDocument/codeAction 10 sent to Clang
+2021/05/28 16:38:07 [91mIDE     LS --> CL: REQUEST textDocument/codeAction 11: [0m
+2021/05/28 16:38:07 [92mIDE     LS <-- CL: ANSWER textDocument/codeAction 11 (11): [0m
+2021/05/28 16:38:07     <-- codeAction(1 elements)
+2021/05/28 16:38:07         > CodeAction: Extract to function
+2021/05/28 16:38:07 <-- codeAction(1 elements)
+2021/05/28 16:38:07 IDE --> textDocument/codeAction 10 [93m read-unlocked[0m
+2021/05/28 16:38:07 [91mIDE <-- LS     CL: ANSWER UNBOUND (10): [0m
+2021/05/28 16:38:07 [92mIDE     LS <-- CL: NOTIFICATION textDocument/publishDiagnostics: [0m
+2021/05/28 16:38:07 CLG <-- textDocument/publishDiagnostics notif82 (queued)
+2021/05/28 16:38:07 CLG <-- textDocument/publishDiagnostics notif82 [93m read-locked[0m
+2021/05/28 16:38:07 CLG <-- textDocument/publishDiagnostics notif82 (running)
+2021/05/28 16:38:07 CLG <-- textDocument/publishDiagnostics notif82 publishDiagnostics(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server752676171/sketch/sonarrr.ino.cpp):
+2021/05/28 16:38:07 CLG <-- textDocument/publishDiagnostics notif82 > 0:0 - 1: drv_unknown_argument
+2021/05/28 16:38:07 CLG <-- textDocument/publishDiagnostics notif82 > 0:0 - 1: drv_unknown_argument_with_suggestion
+2021/05/28 16:38:07 CLG <-- textDocument/publishDiagnostics notif82 > 0:9 - 1: unknown_typename
+2021/05/28 16:38:07 CLG <-- textDocument/publishDiagnostics notif82 > 0:0 - 1: fatal_too_many_errors
+2021/05/28 16:38:07     URI: converted 0:0-0:0 to /not-ino:0:0-0:0
+2021/05/28 16:38:07     URI: converted 0:0-0:0 to /not-ino:0:0-0:0
+2021/05/28 16:38:07     URI: converted 0:9-0:10 to /not-ino:0:9-0:10
+2021/05/28 16:38:07     URI: converted 0:0-0:0 to /not-ino:0:0-0:0
+2021/05/28 16:38:07 CLG <-- textDocument/publishDiagnostics notif82 [93m read-unlocked[0m
+2021/05/28 16:38:07 [92mIDE --> LS     CL: NOTIFICATION textDocument/didSave: [0m
+2021/05/28 16:38:07 IDE --> textDocument/didSave notif4 [93m read-locked[0m
+2021/05/28 16:38:07 --> textDocument/didSave(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino)
+2021/05/28 16:38:07     --| didSave not forwarded to clangd
+2021/05/28 16:38:07 IDE --> textDocument/didSave notif4 [93m read-unlocked[0m
+2021/05/28 16:38:07 RBLD---[93m locked[0m
+2021/05/28 16:38:07     --> RE-initialize()
+2021/05/28 16:38:07 [91mIDE <-- LS     CL: REQUEST window/workDoneProgress/create 1: [0m
+2021/05/28 16:38:07 [92mIDE --> LS     CL: ANSWER window/workDoneProgress/create 1 (1): [0m
+2021/05/28 16:38:07 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=arduinoLanguageServerRebuild BEGIN Building sketch [0m
+2021/05/28 16:38:07 running:  c:\Users\ricar\AppData\Local\Programs\Arduino IDE\resources\app\node_modules\arduino-ide-extension\build\arduino-cli.exe compile --fqbn esp32:esp32:pico32 --only-compilation-database --clean --source-override C:\Users\ricar\AppData\Local\Temp\429858229 --build-path C:\Users\ricar\AppData\Local\Temp\arduino-language-server752676171 --format json C:\Users\ricar\Desktop\ApiPrograms\sonarrr
+2021/05/28 16:38:08 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=arduinoLanguageServerRebuild REPORT compiling. 0%[0m
+2021/05/28 16:38:08 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=arduinoLanguageServerRebuild REPORT compiling.. 0%[0m
+2021/05/28 16:38:09 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=arduinoLanguageServerRebuild REPORT compiling... 0%[0m
+2021/05/28 16:38:09 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=arduinoLanguageServerRebuild REPORT compiling. 0%[0m
+2021/05/28 16:38:09 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=arduinoLanguageServerRebuild REPORT compiling.. 0%[0m
+2021/05/28 16:38:10 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=arduinoLanguageServerRebuild REPORT compiling... 0%[0m
+2021/05/28 16:38:10 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=arduinoLanguageServerRebuild REPORT compiling. 0%[0m
+2021/05/28 16:38:11 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=arduinoLanguageServerRebuild REPORT compiling.. 0%[0m
+2021/05/28 16:38:11 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=arduinoLanguageServerRebuild REPORT compiling... 0%[0m
+2021/05/28 16:38:11 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=arduinoLanguageServerRebuild REPORT compiling. 0%[0m
+2021/05/28 16:38:12 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=arduinoLanguageServerRebuild REPORT compiling.. 0%[0m
+2021/05/28 16:38:12 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=arduinoLanguageServerRebuild REPORT compiling... 0%[0m
+2021/05/28 16:38:13 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=arduinoLanguageServerRebuild REPORT compiling. 0%[0m
+2021/05/28 16:38:13 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=arduinoLanguageServerRebuild REPORT compiling.. 0%[0m
+2021/05/28 16:38:14 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=arduinoLanguageServerRebuild REPORT compiling... 0%[0m
+2021/05/28 16:38:14 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=arduinoLanguageServerRebuild REPORT compiling. 0%[0m
+2021/05/28 16:38:14 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=arduinoLanguageServerRebuild REPORT compiling.. 0%[0m
+2021/05/28 16:38:15 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=arduinoLanguageServerRebuild REPORT compiling... 0%[0m
+2021/05/28 16:38:15 arduino-cli output: {
+  "compiler_out": "",
+  "compiler_err": "",
+  "builder_result": {
+    "build_path": "C:\\Users\\ricar\\AppData\\Local\\Temp\\arduino-language-server752676171"
+  },
+  "success": true
+}
+
+2021/05/28 16:38:15 [91mIDE     LS --> CL: NOTIFICATION textDocument/didChange: [0m
+2021/05/28 16:38:15 RBLD---[93m unlocked[0m
+2021/05/28 16:38:15 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=arduinoLanguageServerRebuild END done[0m
+2021/05/28 16:38:15 [92mIDE     LS <-- CL: REQUEST window/workDoneProgress/create 1: [0m
+2021/05/28 16:38:15 [91mIDE     LS --> CL: ANSWER UNBOUND (1): [0m
+2021/05/28 16:38:15 [91mIDE <-- LS     CL: REQUEST window/workDoneProgress/create 2: [0m
+2021/05/28 16:38:15 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress BEGIN indexing [0m
+2021/05/28 16:38:15 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 0/1 0%[0m
+2021/05/28 16:38:15 [92mIDE --> LS     CL: ANSWER window/workDoneProgress/create 2 (2): [0m
+2021/05/28 16:38:15 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress BEGIN indexing [0m
+2021/05/28 16:38:15 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 0/1 0%[0m
+2021/05/28 16:38:15 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 0/1 0%[0m
+2021/05/28 16:38:15 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress END [0m
+2021/05/28 16:38:15 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 0/1 0%[0m
+2021/05/28 16:38:15 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress END [0m
+2021/05/28 16:38:26 [92mIDE --> LS     CL: REQUEST textDocument/codeAction 11: [0m
+2021/05/28 16:38:26 IDE --> textDocument/codeAction 11 [93m read-locked[0m
+2021/05/28 16:38:26 --> codeAction(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino:26:5)
+2021/05/28 16:38:26     --> codeAction(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server752676171/sketch/sonarrr.ino.cpp:37:5)
+2021/05/28 16:38:26 IDE --> textDocument/codeAction 11 sent to Clang
+2021/05/28 16:38:26 [91mIDE     LS --> CL: REQUEST textDocument/codeAction 12: [0m
+2021/05/28 16:38:26 [92mIDE     LS <-- CL: ANSWER textDocument/codeAction 12 (12): [0m
+2021/05/28 16:38:26 IDE --> textDocument/codeAction 11 Queued resfreshing document symbols
+2021/05/28 16:38:26 SYLD--- [93m read-locked[0m
+2021/05/28 16:38:26 SYLD--- requesting documentSymbol for file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server752676171/sketch/sonarrr.ino.cpp
+2021/05/28 16:38:26 SYLD--- [93m read-unlocked[0m
+2021/05/28 16:38:26 [91mIDE     LS --> CL: REQUEST textDocument/documentSymbol 13: [0m
+2021/05/28 16:38:26     <-- codeAction(0 elements)
+2021/05/28 16:38:26 <-- codeAction(0 elements)
+2021/05/28 16:38:26 IDE --> textDocument/codeAction 11 [93m read-unlocked[0m
+2021/05/28 16:38:26 [91mIDE <-- LS     CL: ANSWER UNBOUND (11): [0m
+2021/05/28 16:38:26 [92mIDE     LS <-- CL: ANSWER textDocument/documentSymbol 13 (13): [0m
+2021/05/28 16:38:26 SYLD--- [93m read-locked[0m
+2021/05/28 16:38:26 SYLD---    symbol: Function setup 15:0-15:12
+2021/05/28 16:38:26 SYLD---             > void setup()
+2021/05/28 16:38:26 SYLD---    symbol: Function loop 17:0-17:11
+2021/05/28 16:38:26 SYLD---             > void loop()
+2021/05/28 16:38:26 SYLD---    symbol: Function sonar1 19:0-19:13
+2021/05/28 16:38:26 SYLD---             > bool sonar1()
+2021/05/28 16:38:26 SYLD---    symbol: Function sonar2 21:0-21:13
+2021/05/28 16:38:26 SYLD---             > bool sonar2()
+2021/05/28 16:38:26 SYLD---    symbol: Function setup 23:0-31:1
+2021/05/28 16:38:26 SYLD---      TRIMMED> void setup()
+2021/05/28 16:38:26 SYLD---    symbol: Function loop 33:0-80:1
+2021/05/28 16:38:26 SYLD---      TRIMMED> void loop()
+2021/05/28 16:38:26 SYLD---    symbol: Function sonar1 83:0-116:1
+2021/05/28 16:38:26 SYLD---      TRIMMED> bool sonar1()
+2021/05/28 16:38:26 SYLD---    symbol: Function sonar2 118:0-149:1
+2021/05/28 16:38:26 SYLD---      TRIMMED> bool sonar2()
+2021/05/28 16:38:26 SYLD--- [93m read-unlocked[0m
+2021/05/28 16:38:26 SYLD--- (done)
+2021/05/28 16:38:36 [92mIDE --> LS     CL: REQUEST textDocument/hover 12: [0m
+2021/05/28 16:38:36 IDE --> textDocument/hover 12 [93m read-locked[0m
+2021/05/28 16:38:36 --> hover(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino:67:24)
+2021/05/28 16:38:36     --> hover(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server752676171/sketch/sonarrr.ino.cpp:78:24)
+2021/05/28 16:38:36 IDE --> textDocument/hover 12 sent to Clang
+2021/05/28 16:38:36 [91mIDE     LS --> CL: REQUEST textDocument/hover 14: [0m
+2021/05/28 16:38:36 [92mIDE     LS <-- CL: ANSWER textDocument/hover 14 (14): [0m
+2021/05/28 16:38:36 IDE --> textDocument/hover 12 [93m read-unlocked[0m
+2021/05/28 16:38:36 [91mIDE <-- LS     CL: ANSWER UNBOUND (12): [0m
+2021/05/28 18:16:02 [92mIDE --> LS     CL: REQUEST shutdown 13: [0m
+2021/05/28 18:16:02 IDE --> shutdown 13 [93m read-locked[0m
+2021/05/28 18:16:02 IDE --> shutdown 13 sent to Clang
+2021/05/28 18:16:02 [91mIDE     LS --> CL: REQUEST shutdown 15: [0m
+2021/05/28 18:16:02 [92mIDE     LS <-- CL: ANSWER shutdown 15 (15): [0m
+2021/05/28 18:16:02 IDE --> shutdown 13 [93m read-unlocked[0m
+2021/05/28 18:16:02 [91mIDE <-- LS     CL: ANSWER UNBOUND (13): [0m
+2021/05/28 18:16:02 [92mIDE --> LS     CL: NOTIFICATION exit: [0m
+2021/05/28 18:16:02 IDE --> exit notif5 [93m read-locked[0m
+2021/05/28 18:16:02 IDE --> exit notif5 sent to Clang
+2021/05/28 18:16:02 [91mIDE     LS --> CL: NOTIFICATION exit: [0m
+2021/05/28 18:16:02 IDE --> exit notif5 [93m read-unlocked[0m
+
+
+
+
+
+
+
+Started logging.
+2021/06/15 17:55:12 logging to c:\Users\ricar\Desktop\ApiPrograms\sonarrr\inols.log
+2021/06/15 17:55:12 Initial board configuration: {"ESP32 Pico Kit" esp32:esp32:pico32}
+2021/06/15 17:55:12 Language server build path: C:\Users\ricar\AppData\Local\Temp\arduino-language-server574674779
+2021/06/15 17:55:12 Language server build sketch root: C:\Users\ricar\AppData\Local\Temp\arduino-language-server574674779\sketch
+2021/06/15 17:55:12 [92mIDE --> LS     CL: REQUEST initialize 0: [0m
+2021/06/15 17:55:12 IDE --> initialize 0 [93m locked[0m
+2021/06/15 17:55:12 IDE --> initialize 0 [93m unlocked[0m
+2021/06/15 17:55:12 [91mIDE <-- LS     CL: ANSWER UNBOUND (0): [0m
+2021/06/15 17:55:12 INIT--- initializing workbench
+2021/06/15 17:55:12 INIT--- [93m locked[0m
+2021/06/15 17:55:12     --> initialize(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr)
+2021/06/15 17:55:12 running:  c:\Users\ricar\AppData\Local\Programs\Arduino IDE\resources\app\node_modules\arduino-ide-extension\build\arduino-cli.exe compile --fqbn esp32:esp32:pico32 --only-compilation-database --clean --source-override C:\Users\ricar\AppData\Local\Temp\988157182 --build-path C:\Users\ricar\AppData\Local\Temp\arduino-language-server574674779 --format json C:\Users\ricar\Desktop\ApiPrograms\sonarrr
+2021/06/15 17:55:12 [92mIDE --> LS     CL: NOTIFICATION initialized: [0m
+2021/06/15 17:56:05 arduino-cli output: {
+  "compiler_out": "",
+  "compiler_err": "",
+  "builder_result": {
+    "build_path": "C:\\Users\\ricar\\AppData\\Local\\Temp\\arduino-language-server574674779"
+  },
+  "success": false
+}
+
+2021/06/15 17:56:05 running:  c:\Users\ricar\AppData\Local\Programs\Arduino IDE\resources\app\node_modules\arduino-ide-extension\build\arduino-cli.exe config dump --format json
+2021/06/15 17:56:05 Arduino Data Dir ->  C:\Users\ricar\AppData\Local\Arduino15
+2021/06/15 17:56:05     Starting clangd: c:\Users\ricar\AppData\Local\Programs\Arduino IDE\resources\app\node_modules\arduino-ide-extension\build\bin\clangd.exe -log=verbose --compile-commands-dir=C:\Users\ricar\AppData\Local\Temp\arduino-language-server574674779 -query-driver=C:\Users\ricar\AppData\Local\Arduino15\packages\**
+2021/06/15 17:56:05 logging to c:\Users\ricar\Desktop\ApiPrograms\sonarrr\inols-clangd.log
+2021/06/15 17:56:05 logging to c:\Users\ricar\Desktop\ApiPrograms\sonarrr\inols-clangd-err.log
+2021/06/15 17:56:05 [91mIDE     LS --> CL: REQUEST initialize 0: [0m
+2021/06/15 17:56:06 [92mIDE     LS <-- CL: ANSWER initialize 0 (0): [0m
+2021/06/15 17:56:06 [91mIDE     LS --> CL: NOTIFICATION initialized: [0m
+2021/06/15 17:56:06 INIT--- initializing workbench (done)
+2021/06/15 17:56:06 INIT--- [93m unlocked[0m
+2021/06/15 17:56:06 IDE --> initialized notif1 [93m read-locked[0m
+2021/06/15 17:56:06 IDE --> initialized notif1 notification is not propagated to clangd
+2021/06/15 17:56:06 IDE --> initialized notif1 [93m read-unlocked[0m
+2021/06/15 17:56:06 [92mIDE --> LS     CL: NOTIFICATION textDocument/didOpen: [0m
+2021/06/15 17:56:06 IDE --> textDocument/didOpen notif2 [93m locked[0m
+2021/06/15 17:56:06 IDE --> textDocument/didOpen notif2 (file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino@1 as 'cpp')
+2021/06/15 17:56:06     increasing .ino tracked files count: 1
+2021/06/15 17:56:06 IDE --> textDocument/didOpen notif2 to clang: didOpen(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server574674779/sketch/sonarrr.ino.cpp@1 as 'cpp')
+2021/06/15 17:56:06 IDE --> textDocument/didOpen notif2 sent to Clang
+2021/06/15 17:56:06 [91mIDE     LS --> CL: NOTIFICATION textDocument/didOpen: [0m
+2021/06/15 17:56:06 IDE --> textDocument/didOpen notif2 Queued resfreshing document symbols
+2021/06/15 17:56:06 IDE --> textDocument/didOpen notif2 [93m unlocked[0m
+2021/06/15 17:56:06 SYLD--- [93m read-locked[0m
+2021/06/15 17:56:06 [92mIDE --> LS     CL: REQUEST textDocument/codeAction 1: [0m
+2021/06/15 17:56:06 IDE --> textDocument/codeAction 1 [93m read-locked[0m
+2021/06/15 17:56:06 --> codeAction(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino:26:5)
+2021/06/15 17:56:06     --> codeAction(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server574674779/sketch/sonarrr.ino.cpp:28:5)
+2021/06/15 17:56:06 IDE --> textDocument/codeAction 1 sent to Clang
+2021/06/15 17:56:06 [91mIDE     LS --> CL: REQUEST textDocument/codeAction 1: [0m
+2021/06/15 17:56:06 SYLD--- requesting documentSymbol for file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server574674779/sketch/sonarrr.ino.cpp
+2021/06/15 17:56:06 SYLD--- [93m read-unlocked[0m
+2021/06/15 17:56:06 [91mIDE     LS --> CL: REQUEST textDocument/documentSymbol 2: [0m
+2021/06/15 17:56:06 [92mIDE     LS <-- CL: REQUEST window/workDoneProgress/create 0: [0m
+2021/06/15 17:56:06 [91mIDE     LS --> CL: ANSWER UNBOUND (0): [0m
+2021/06/15 17:56:06 [91mIDE <-- LS     CL: REQUEST window/workDoneProgress/create 0: [0m
+2021/06/15 17:56:06 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress BEGIN indexing [0m
+2021/06/15 17:56:06 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 0/1 0%[0m
+2021/06/15 17:56:06 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 0/1 0%[0m
+2021/06/15 17:56:06 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress REPORT 0/1 0%[0m
+2021/06/15 17:56:06 [92mIDE     LS <-- CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress END [0m
+2021/06/15 17:56:08 [92mIDE     LS <-- CL: NOTIFICATION textDocument/publishDiagnostics: [0m
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 (queued)
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 [93m read-locked[0m
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 (running)
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 publishDiagnostics(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server574674779/sketch/sonarrr.ino.cpp):
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 0:9 - 1: pp_file_not_found
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 16:20 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 17:20 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 18:20 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 19:20 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 21:2 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 27:8 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 38:8 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 51:9 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 51:22 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 54:8 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 57:4 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 58:4 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 59:4 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 60:4 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 65:8 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 69:8 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 81:27 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 82:4 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 84:27 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 0:0 - 1: fatal_too_many_errors
+2021/06/15 17:56:08 [92mIDE     LS <-- CL: ANSWER textDocument/codeAction 1 (1): [0m
+2021/06/15 17:56:08 [92mIDE     LS <-- CL: ANSWER textDocument/documentSymbol 2 (2): [0m
+2021/06/15 17:56:08     URI: converted 0:9-0:20 to /not-ino:0:9-0:20
+2021/06/15 17:56:08 SYLD--- [93m read-locked[0m
+2021/06/15 17:56:08 SYLD---    symbol: Function setup 14:0-22:1
+2021/06/15 17:56:08 SYLD---      TRIMMED> void setup()
+2021/06/15 17:56:08 SYLD---    symbol: Function loop 24:0-71:1
+2021/06/15 17:56:08 SYLD---      TRIMMED> void loop()
+2021/06/15 17:56:08 SYLD---    symbol: Function sonar1 74:0-107:1
+2021/06/15 17:56:08 SYLD---      TRIMMED> bool sonar1()
+2021/06/15 17:56:08 SYLD---    symbol: Function sonar2 109:0-140:1
+2021/06/15 17:56:08 SYLD---      TRIMMED> bool sonar2()
+2021/06/15 17:56:08 SYLD--- [93m read-unlocked[0m
+2021/06/15 17:56:08 SYLD--- (done)
+2021/06/15 17:56:08     URI: converted 16:20-16:26 to C:\Users\ricar\Desktop\ApiPrograms\sonarrr\sonarrr.ino:14:20-14:26
+2021/06/15 17:56:08     URI: converted 17:20-17:25 to C:\Users\ricar\Desktop\ApiPrograms\sonarrr\sonarrr.ino:15:20-15:25
+2021/06/15 17:56:08     URI: converted 18:20-18:26 to C:\Users\ricar\Desktop\ApiPrograms\sonarrr\sonarrr.ino:16:20-16:26
+2021/06/15 17:56:08     URI: converted 19:20-19:25 to C:\Users\ricar\Desktop\ApiPrograms\sonarrr\sonarrr.ino:17:20-17:25
+2021/06/15 17:56:08     URI: converted 21:2-21:8 to C:\Users\ricar\Desktop\ApiPrograms\sonarrr\sonarrr.ino:19:2-19:8
+2021/06/15 17:56:08     URI: converted 27:8-27:14 to C:\Users\ricar\Desktop\ApiPrograms\sonarrr\sonarrr.ino:25:8-25:14
+2021/06/15 17:56:08     <-- codeAction(0 elements)
+2021/06/15 17:56:08 <-- codeAction(0 elements)
+2021/06/15 17:56:08 IDE --> textDocument/codeAction 1 [93m read-unlocked[0m
+2021/06/15 17:56:08 [91mIDE <-- LS     CL: ANSWER UNBOUND (1): [0m
+2021/06/15 17:56:08 [92mIDE --> LS     CL: NOTIFICATION $/setTraceNotification: [0m
+2021/06/15 17:56:08 IDE --> $/setTraceNotification notif3 [93m read-locked[0m
+2021/06/15 17:56:08 IDE --> $/setTraceNotification notif3 sent to Clang
+2021/06/15 17:56:08 [91mIDE     LS --> CL: NOTIFICATION $/setTraceNotification: [0m
+2021/06/15 17:56:08 IDE --> $/setTraceNotification notif3 Queued check document symbols
+2021/06/15 17:56:08 IDE --> $/setTraceNotification notif3 [93m read-unlocked[0m
+2021/06/15 17:56:08 [92mIDE --> LS     CL: NOTIFICATION $/setTraceNotification: [0m
+2021/06/15 17:56:08 IDE --> $/setTraceNotification notif4 [93m read-locked[0m
+2021/06/15 17:56:08 IDE --> $/setTraceNotification notif4 sent to Clang
+2021/06/15 17:56:08 [91mIDE     LS --> CL: NOTIFICATION $/setTraceNotification: [0m
+2021/06/15 17:56:08 IDE --> $/setTraceNotification notif4 [93m read-unlocked[0m
+2021/06/15 17:56:08 [92mIDE --> LS     CL: NOTIFICATION $/setTraceNotification: [0m
+2021/06/15 17:56:08 IDE --> $/setTraceNotification notif5 [93m read-locked[0m
+2021/06/15 17:56:08 IDE --> $/setTraceNotification notif5 sent to Clang
+2021/06/15 17:56:08 [91mIDE     LS --> CL: NOTIFICATION $/setTraceNotification: [0m
+2021/06/15 17:56:08 IDE --> $/setTraceNotification notif5 [93m read-unlocked[0m
+2021/06/15 17:56:08 [92mIDE --> LS     CL: NOTIFICATION $/setTraceNotification: [0m
+2021/06/15 17:56:08 IDE --> $/setTraceNotification notif6 [93m read-locked[0m
+2021/06/15 17:56:08 IDE --> $/setTraceNotification notif6 sent to Clang
+2021/06/15 17:56:08 [91mIDE     LS --> CL: NOTIFICATION $/setTraceNotification: [0m
+2021/06/15 17:56:08 IDE --> $/setTraceNotification notif6 [93m read-unlocked[0m
+2021/06/15 17:56:08 [92mIDE --> LS     CL: ANSWER window/workDoneProgress/create 0 (0): [0m
+2021/06/15 17:56:08     URI: converted 38:8-38:14 to C:\Users\ricar\Desktop\ApiPrograms\sonarrr\sonarrr.ino:36:8-36:14
+2021/06/15 17:56:08     URI: converted 51:9-51:15 to C:\Users\ricar\Desktop\ApiPrograms\sonarrr\sonarrr.ino:49:9-49:15
+2021/06/15 17:56:08 SYCK--- [93m read-locked[0m
+2021/06/15 17:56:08 SYCK--- requesting documentSymbol for file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server574674779/sketch/sonarrr.ino.cpp
+2021/06/15 17:56:08 SYCK--- [93m read-unlocked[0m
+2021/06/15 17:56:08 [91mIDE     LS --> CL: REQUEST textDocument/documentSymbol 3: [0m
+2021/06/15 17:56:08 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress BEGIN indexing [0m
+2021/06/15 17:56:08 [91mIDE <-- LS     CL: NOTIFICATION $/progress: TOKEN=backgroundIndexProgress END [0m
+2021/06/15 17:56:08     URI: converted 51:22-51:28 to C:\Users\ricar\Desktop\ApiPrograms\sonarrr\sonarrr.ino:49:22-49:28
+2021/06/15 17:56:08     URI: converted 54:8-54:13 to C:\Users\ricar\Desktop\ApiPrograms\sonarrr\sonarrr.ino:52:8-52:13
+2021/06/15 17:56:08 [92mIDE     LS <-- CL: ANSWER textDocument/documentSymbol 3 (3): [0m
+2021/06/15 17:56:08 SYCK--- [93m read-locked[0m
+2021/06/15 17:56:08 SYCK---    symbol: Function setup 14:0-22:1
+2021/06/15 17:56:08 SYCK---      TRIMMED> void setup()
+2021/06/15 17:56:08 SYCK---    symbol: Function loop 24:0-71:1
+2021/06/15 17:56:08 SYCK---      TRIMMED> void loop()
+2021/06/15 17:56:08 SYCK---    symbol: Function sonar1 74:0-107:1
+2021/06/15 17:56:08 SYCK---      TRIMMED> bool sonar1()
+2021/06/15 17:56:08 SYCK---    symbol: Function sonar2 109:0-140:1
+2021/06/15 17:56:08 SYCK---      TRIMMED> bool sonar2()
+2021/06/15 17:56:08 SYCK--- [93m read-unlocked[0m
+2021/06/15 17:56:08 SYCK--- (done)
+2021/06/15 17:56:08     URI: converted 57:4-57:10 to C:\Users\ricar\Desktop\ApiPrograms\sonarrr\sonarrr.ino:55:4-55:10
+2021/06/15 17:56:08     URI: converted 58:4-58:10 to C:\Users\ricar\Desktop\ApiPrograms\sonarrr\sonarrr.ino:56:4-56:10
+2021/06/15 17:56:08     URI: converted 59:4-59:10 to C:\Users\ricar\Desktop\ApiPrograms\sonarrr\sonarrr.ino:57:4-57:10
+2021/06/15 17:56:08     URI: converted 60:4-60:10 to C:\Users\ricar\Desktop\ApiPrograms\sonarrr\sonarrr.ino:58:4-58:10
+2021/06/15 17:56:08     URI: converted 65:8-65:14 to C:\Users\ricar\Desktop\ApiPrograms\sonarrr\sonarrr.ino:63:8-63:14
+2021/06/15 17:56:08     URI: converted 69:8-69:14 to C:\Users\ricar\Desktop\ApiPrograms\sonarrr\sonarrr.ino:67:8-67:14
+2021/06/15 17:56:08     URI: converted 81:27-81:30 to C:\Users\ricar\Desktop\ApiPrograms\sonarrr\sonarrr.ino:79:27-79:30
+2021/06/15 17:56:08     URI: converted 82:4-82:21 to C:\Users\ricar\Desktop\ApiPrograms\sonarrr\sonarrr.ino:80:4-80:21
+2021/06/15 17:56:08     URI: converted 84:27-84:31 to C:\Users\ricar\Desktop\ApiPrograms\sonarrr\sonarrr.ino:82:27-82:31
+2021/06/15 17:56:08     URI: converted 0:0-0:0 to /not-ino:0:0-0:0
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 to IDE: publishDiagnostics(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino):
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 14:20 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 15:20 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 16:20 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 17:20 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 19:2 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 25:8 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 36:8 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 49:9 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 49:22 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 52:8 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 55:4 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 56:4 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 57:4 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 58:4 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 63:8 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 67:8 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 79:27 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 80:4 - 1: undeclared_var_use
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 > 82:27 - 1: undeclared_var_use
+2021/06/15 17:56:08 [91mIDE <-- LS     CL: NOTIFICATION textDocument/publishDiagnostics: [0m
+2021/06/15 17:56:08 CLG <-- textDocument/publishDiagnostics notif6 [93m read-unlocked[0m
+2021/06/15 17:56:08 [92mIDE --> LS     CL: REQUEST textDocument/codeAction 2: [0m
+2021/06/15 17:56:08 IDE --> textDocument/codeAction 2 [93m read-locked[0m
+2021/06/15 17:56:08 --> codeAction(file:///c%3A/Users/ricar/Desktop/ApiPrograms/sonarrr/sonarrr.ino:26:5)
+2021/06/15 17:56:08     --> codeAction(file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server574674779/sketch/sonarrr.ino.cpp:28:5)
+2021/06/15 17:56:08 IDE --> textDocument/codeAction 2 sent to Clang
+2021/06/15 17:56:08 [91mIDE     LS --> CL: REQUEST textDocument/codeAction 4: [0m
+2021/06/15 17:56:08 [92mIDE     LS <-- CL: ANSWER textDocument/codeAction 4 (4): [0m
+2021/06/15 17:56:08 IDE --> textDocument/codeAction 2 Queued check document symbols
+2021/06/15 17:56:08 SYCK--- [93m read-locked[0m
+2021/06/15 17:56:08 SYCK--- requesting documentSymbol for file:///C:/Users/ricar/AppData/Local/Temp/arduino-language-server574674779/sketch/sonarrr.ino.cpp
+2021/06/15 17:56:08 SYCK--- [93m read-unlocked[0m
+2021/06/15 17:56:08 [91mIDE     LS --> CL: REQUEST textDocument/documentSymbol 5: [0m
+2021/06/15 17:56:08     <-- codeAction(0 elements)
+2021/06/15 17:56:08 <-- codeAction(0 elements)
+2021/06/15 17:56:08 IDE --> textDocument/codeAction 2 [93m read-unlocked[0m
+2021/06/15 17:56:08 [91mIDE <-- LS     CL: ANSWER UNBOUND (2): [0m
+2021/06/15 17:56:08 [92mIDE     LS <-- CL: ANSWER textDocument/documentSymbol 5 (5): [0m
+2021/06/15 17:56:08 SYCK--- [93m read-locked[0m
+2021/06/15 17:56:08 SYCK---    symbol: Function setup 14:0-22:1
+2021/06/15 17:56:08 SYCK---      TRIMMED> void setup()
+2021/06/15 17:56:08 SYCK---    symbol: Function loop 24:0-71:1
+2021/06/15 17:56:08 SYCK---      TRIMMED> void loop()
+2021/06/15 17:56:08 SYCK---    symbol: Function sonar1 74:0-107:1
+2021/06/15 17:56:08 SYCK---      TRIMMED> bool sonar1()
+2021/06/15 17:56:08 SYCK---    symbol: Function sonar2 109:0-140:1
+2021/06/15 17:56:08 SYCK---      TRIMMED> bool sonar2()
+2021/06/15 17:56:08 SYCK--- [93m read-unlocked[0m
+2021/06/15 17:56:08 SYCK--- (done)
+2021/06/15 17:56:15 [92mIDE --> LS     CL: NOTIFICATION $/setTraceNotification: [0m
+2021/06/15 17:56:15 IDE --> $/setTraceNotification notif7 [93m read-locked[0m
+2021/06/15 17:56:15 IDE --> $/setTraceNotification notif7 sent to Clang
+2021/06/15 17:56:15 [91mIDE     LS --> CL: NOTIFICATION $/setTraceNotification: [0m
+2021/06/15 17:56:15 IDE --> $/setTraceNotification notif7 [93m read-unlocked[0m
+2021/06/15 17:56:20 [92mIDE --> LS     CL: NOTIFICATION $/setTraceNotification: [0m
+2021/06/15 17:56:20 IDE --> $/setTraceNotification notif8 [93m read-locked[0m
+2021/06/15 17:56:20 IDE --> $/setTraceNotification notif8 sent to Clang
+2021/06/15 17:56:20 [91mIDE     LS --> CL: NOTIFICATION $/setTraceNotification: [0m
+2021/06/15 17:56:20 IDE --> $/setTraceNotification notif8 [93m read-unlocked[0m
+2021/06/15 18:11:11 [92mIDE --> LS     CL: REQUEST shutdown 3: [0m
+2021/06/15 18:11:11 IDE --> shutdown 3 [93m read-locked[0m
+2021/06/15 18:11:11 IDE --> shutdown 3 sent to Clang
+2021/06/15 18:11:11 [91mIDE     LS --> CL: REQUEST shutdown 6: [0m
+2021/06/15 18:11:11 [92mIDE     LS <-- CL: ANSWER shutdown 6 (6): [0m
+2021/06/15 18:11:11 IDE --> shutdown 3 [93m read-unlocked[0m
+2021/06/15 18:11:11 [91mIDE <-- LS     CL: ANSWER UNBOUND (3): [0m
+2021/06/15 18:11:11 [92mIDE --> LS     CL: NOTIFICATION exit: [0m
+2021/06/15 18:11:11 IDE --> exit notif9 [93m read-locked[0m
+2021/06/15 18:11:11 IDE --> exit notif9 sent to Clang
+2021/06/15 18:11:11 [91mIDE     LS --> CL: NOTIFICATION exit: [0m
+2021/06/15 18:11:11 IDE --> exit notif9 [93m read-unlocked[0m
+2021/06/15 18:11:11 Lost connection with clangd!
+2021/06/15 18:11:11 removing buildpath
